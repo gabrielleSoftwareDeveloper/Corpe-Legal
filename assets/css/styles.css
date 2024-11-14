@@ -1,0 +1,89 @@
+/* Estilos generales */
+
+*{
+    font-family: playfair-display;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+body{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.layout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout__header{
+    width: 100%;
+    background-color: #999;
+}
+
+.layout__menu{
+    background-color:bisque;
+}
+
+.layout__states{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1rem;
+    background-color:aliceblue;
+
+}
+
+.layout__footer{
+    width: 100%;
+    height: 30vh;
+    background-color:blueviolet;
+}
+
+/* Navegador */
+
+.menu__list{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.menu__icon{
+    font-size: 1.5rem;
+    color: rgb(47, 66, 125);
+}
+
+/* Secciones de los estados */
+
+.states__pendiente{
+    width: 33%;
+    background-color: rgb(250, 255, 228);
+    padding: 2rem;
+}
+
+/* Opciones */
+#pendiente{
+    color:#524343;
+}
+
+#en-curso{
+    color:#524343;
+}
+
+.states__en-curso{
+    width: 33%;
+    background-color: pink;
+}
+.states__reservado{
+    width:33%;
+    background-color: rgb(195, 104, 119);
+}

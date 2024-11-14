@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abogados cristianos</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/playfair-display/" />
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Header con filtro -->
+        <header class="layout__header">
+            <!-- Navegador -->
+        <nav class="layout__menu">
+            <ul class="menu__list">
+                <li class="menu__option">
+                    <a href="index.html" class="menu__link">
+                        <i class="menu__icon fa-solid fa-house"></i>
+                        <span class="menu__overlay">Home</span>
+                    </a>
+                </li>
+
+                <li class="menu__option">
+                    <a href="sobre-mi.html" class="menu__link">
+                        <i class="menu__icon fa-solid fa-user"></i>
+                        <span class="menu__overlay">Opción 1</span>
+                    </a>
+                </li>
+
+                <li class="menu__option">
+                    <a href="curriculum.html" class="menu__link">
+                        <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                        <span class="menu__overlay">Opción 2</span>
+                    </a>
+                </li>
+
+                <li class="menu__option">
+                    <a href="portafolio.html" class="menu__link">
+                        <i class="menu__icon fa-solid fa-briefcase"></i>
+                        <span class="menu__overlay">Opción 3</span>
+                    </a>
+                </li>
+
+                <li class="menu__option">
+                    <a href="blog.html" class="menu__link">
+                        <i class="menu__icon fa-solid fa-book"></i>
+                        <span class="menu__overlay">Opción 4</span>
+                    </a>
+                </li>
+
+                <li class="menu__option">
+                    <a href="contacto.html" class="menu__link menu__link--active">
+                        <i class="menu__icon fa-solid fa-envelope"></i>
+                        <span class="menu__overlay">Opción 5</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+            <section class="header__filter"></section>
+        </header>
+
+
+        <!-- Notificaciones de usuarios dependiendo de su estado (pendiente, en curso, reservado) -->
+        <div class="layout__states">
+
+            <section class="states__pendiente">
+
+                <div class="states__users">
+                        <div class="users__list">
+                            <label for="pendiente" id="pendiente">Usuarios pendientes</label>
+                            <select class="users__options" name="pendiente" id="pendiente">
+                                <!-- Las opciones provienen de la BBDD -->
+                                <option disabled selected value="" class="options__option">Escoge una opción
+                                </option>
+                            </select>
+                        </div>
+                </div>
+
+                <article class="states__card pendiente__card"></article>
+
+            </section>
+
+            <section class="states__en-curso">
+
+                <div class="states__users">
+                    <div class="states__users">
+                        <div class="users__list">
+                            <label for="pendiente" id="en-curso">Usuarios en curso</label>
+                            <select class="users__options" name="pendiente" id="pendiente">
+                                <!-- Las opciones provienen de la BBDD -->
+                                <option disabled selected value="" class="options__option options-option-en-curso">Escoge una opción
+                                </option>
+                            </select>
+                        </div>
+                </div>
+
+                <article class="states__card en-curso__card"></article>
+
+            </section>
+
+            <section class="states__reservado">
+                <article class="states__card reservado__card"></article>
+            </section>
+        </div>
+
+        <!-- Footer que contiene ??? -->
+        <footer class="layout__footer">
+        </footer>
+
+    </div>
+</body>
+
+</html>
