@@ -4,63 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abogados cristianos</title>
+    <title>Corpe Legal - CRM</title>
+    <link rel="icon" href="assets/img/logo-corpe-legal.png" />
+    <!-- Fuentes y estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
     <link rel="stylesheet" href="assets/fonts/playfair-display/" />
+    <!-- API Calendario Google -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+
 </head>
 
 <body>
+
     <div class="layout">
 
         <!-- Header con filtro -->
         <header class="layout__header">
             <!-- Navegador -->
-        <nav class="layout__menu">
-            <ul class="menu__list">
-                <li class="menu__option">
-                    <a href="index.html" class="menu__link">
-                        <i class="menu__icon fa-solid fa-house"></i>
-                        <span class="menu__overlay">Home</span>
-                    </a>
-                </li>
+            <nav class="layout__menu">
+                <h1 class="menu__title">Corpe Legal</h1>
+                
+                <ul class="menu__list">
+                    <li class="menu__option">
+                        <a href="index.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-house"></i>
+                            <span class="menu__overlay">Home</span>
+                        </a>
+                    </li>
 
-                <li class="menu__option">
-                    <a href="sobre-mi.html" class="menu__link">
-                        <i class="menu__icon fa-solid fa-user"></i>
-                        <span class="menu__overlay">Opción 1</span>
-                    </a>
-                </li>
+                    <li class="menu__option">
+                        <a href="sobre-mi.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-user"></i>
+                            <span class="menu__overlay">Opción 1</span>
+                        </a>
+                    </li>
 
-                <li class="menu__option">
-                    <a href="curriculum.html" class="menu__link">
-                        <i class="menu__icon fa-solid fa-graduation-cap"></i>
-                        <span class="menu__overlay">Opción 2</span>
-                    </a>
-                </li>
+                    <li class="menu__option">
+                        <a href="curriculum.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                            <span class="menu__overlay">Opción 2</span>
+                        </a>
+                    </li>
 
-                <li class="menu__option">
-                    <a href="portafolio.html" class="menu__link">
-                        <i class="menu__icon fa-solid fa-briefcase"></i>
-                        <span class="menu__overlay">Opción 3</span>
-                    </a>
-                </li>
+                    <li class="menu__option">
+                        <a href="portafolio.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-briefcase"></i>
+                            <span class="menu__overlay">Opción 3</span>
+                        </a>
+                    </li>
 
-                <li class="menu__option">
-                    <a href="blog.html" class="menu__link">
-                        <i class="menu__icon fa-solid fa-book"></i>
-                        <span class="menu__overlay">Opción 4</span>
-                    </a>
-                </li>
+                    <li class="menu__option">
+                        <a href="blog.html" class="menu__link">
+                            <i class="menu__icon fa-solid fa-book"></i>
+                            <span class="menu__overlay">Opción 4</span>
+                        </a>
+                    </li>
 
-                <li class="menu__option">
-                    <a href="contacto.html" class="menu__link menu__link--active">
-                        <i class="menu__icon fa-solid fa-envelope"></i>
-                        <span class="menu__overlay">Opción 5</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                    <li class="menu__option">
+                        <a href="contacto.html" class="menu__link menu__link--active">
+                            <i class="menu__icon fa-solid fa-envelope"></i>
+                            <span class="menu__overlay">Opción 5</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
             <section class="header__filter"></section>
         </header>
 
@@ -71,14 +80,14 @@
             <section class="states__pendiente">
 
                 <div class="states__users">
-                        <div class="users__list">
-                            <label for="pendiente" id="pendiente">Usuarios pendientes</label>
-                            <select class="users__options" name="pendiente" id="pendiente">
-                                <!-- Las opciones provienen de la BBDD -->
-                                <option disabled selected value="" class="options__option">Escoge una opción
-                                </option>
-                            </select>
-                        </div>
+                    <div class="users__list">
+                        <label for="pendiente" id="pendiente">Usuarios pendientes</label>
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Escoge una opción
+                            </option>
+                        </select>
+                    </div>
                 </div>
 
                 <article class="states__card pendiente__card"></article>
@@ -93,23 +102,44 @@
                             <label for="pendiente" id="en-curso">Usuarios en curso</label>
                             <select class="users__options" name="pendiente" id="pendiente">
                                 <!-- Las opciones provienen de la BBDD -->
-                                <option disabled selected value="" class="options__option options-option-en-curso">Escoge una opción
+                                <option disabled selected value="" class="options__option options-option-en-curso">
+                                    Escoge una opción
                                 </option>
                             </select>
                         </div>
-                </div>
+                    </div>
 
-                <article class="states__card en-curso__card"></article>
+                    <article class="states__card en-curso__card"></article>
 
             </section>
 
             <section class="states__reservado">
+
+                <div class="states__users">
+                    <div class="states__users">
+                        <div class="users__list">
+                            <label for="pendiente" id="en-curso">Usuarios en reserva</label>
+                            <select class="users__options" name="pendiente" id="reserva">
+                                <!-- Las opciones provienen de la BBDD -->
+                                <option disabled selected value="" class="options__option options-option-en-curso">
+                                    Escoge una opción
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
                 <article class="states__card reservado__card"></article>
             </section>
         </div>
 
         <!-- Footer que contiene ??? -->
-        <footer class="layout__footer">
+        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
+            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20241031/20241031&text=Reunión&details=Revisión+de+proyecto&location=Oficina" target="_blank">
+                Añadir Evento
+            </a>
+            
+
         </footer>
 
     </div>

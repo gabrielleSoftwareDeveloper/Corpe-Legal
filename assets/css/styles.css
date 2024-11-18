@@ -1,10 +1,21 @@
 /* Estilos generales */
+:root{
+    --color--primary: #ffffff;
+    --color-secondary: rgb(49, 122, 93);
+    --color-text: #1c1b1b;
+    --color-bg-user-cards: #dfdbdb;
+    --linear-grad: linear-gradient(to right, #141E30, #243855);
+    --grad-clr1: #141E30;
+    --grad-clr2: #243B55;
+}
 
 *{
     font-family: playfair-display;
     text-decoration: none;
     list-style-type: none;
-    
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
 }
 
 body{
@@ -24,11 +35,11 @@ body{
 
 .layout__header{
     width: 100%;
-    background-color: #999;
 }
 
 .layout__menu{
-    background-color:bisque;
+    width: 100%;
+    border-bottom:var(--color-secondary);
 }
 
 .layout__states{
@@ -37,15 +48,13 @@ body{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin: 1rem;
+    margin: 0rem;
     background-color:aliceblue;
 
 }
 
 .layout__footer{
     width: 100%;
-    height: 30vh;
-    background-color:blueviolet;
 }
 
 /* Navegador */
@@ -54,36 +63,330 @@ body{
     height: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 1rem;
+    align-items: center;
+    padding: 0rem;
 }
 
 .menu__icon{
     font-size: 1.5rem;
-    color: rgb(47, 66, 125);
+    color: rgb(49, 122, 93);
+}
+
+.menu__title{ 
+    padding: 0;
+    margin: 0;
+    color: var(--color-secondary); 
+    font-size: 23.0686px; 
+    font-family: cinzel, serif; 
+    font-weight: bold; 
+    font-style: normal; 
+    text-anchor: middle; 
+    text-decoration: none; 
+    text-transform: capitalize; 
+
+}
+
+.menu__overlay{
+    font-family: cinzel, serif; 
+    font-weight: bold;
+    color: var(--color-text);
 }
 
 /* Secciones de los estados */
 
 .states__pendiente{
     width: 33%;
-    background-color: rgb(250, 255, 228);
+    border-right: 1px solid var(--color-bg-user-cards);
     padding: 2rem;
 }
 
 /* Opciones */
 #pendiente{
-    color:#524343;
+    color:var(--color-text);
 }
 
 #en-curso{
-    color:#524343;
+    color:var(--color-text);
+}
+
+#reserva{
+    color:var(--color-text);
 }
 
 .states__en-curso{
     width: 33%;
-    background-color: pink;
+    border-right: 1px solid var(--color-bg-user-cards);
+    padding: 2rem;
+
 }
 .states__reservado{
     width:33%;
-    background-color: rgb(195, 104, 119);
+    padding: 2rem;
+
 }
+
+/* Tarjetas de usuario */
+.states__card{
+    background: linear-gradient(180deg, var(--color-bg-user-cards), rgba(255, 255, 255, 0));
+    padding: 7rem 5rem;
+    margin-top: 1rem;
+}
+
+
+/* LOGIN / REGISTER */
+
+.layout__login{
+    position: relative;
+    width: 850px;
+    height: 500px;
+    background-color: #ffffff;
+    box-shadow: 25px 30px 55px #5557;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.login__form{
+    position: absolute;
+    width: 60%;
+    height: 100%;
+
+}
+
+.login__sign-up{
+    opacity: 0;
+    z-index: 1;
+}
+
+.login__sign-in{
+    z-index: 2;
+}
+
+/* Etiqueta form */
+.login__form-to-send{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px;
+}
+
+
+.overlay-panel__title, .login__title{
+    color: var(--grad-clr1);
+}
+
+.form__social-container{
+    margin: 20px 0px;
+}
+
+.social-container a{
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.form__login-span, .menu__overlay{
+    font-size: 12px;
+}
+
+.form__login-infield{
+    position: relative;
+    margin: 8px 0px;
+    width: 100%;
+}
+
+.form__login-input{
+    width: 100%;
+    padding: 12px 8px;
+    background-color: #f3f3f3;
+    border: none;
+    outline: none;
+}
+
+.form__login-label{
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: var(--linear-grad);
+    transition: 0.3s;
+}
+
+.form__login-input:focus ~ .form__login-label {
+    width: 100%;
+}
+
+.social-container__social, .forgot{
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0px;
+}
+
+.forgot{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #EEE;
+}
+
+.form__login-button, .overlay-panel__button, #overlayBtn {
+    border-radius: 20px;
+    border: 1px solid var(--grad-clr1);
+    background: var(--grad-clr2);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.login__form button {
+    margin-top: 17px;
+    transition: 80ms ease-in;
+}
+
+.login__form button:hover {
+    background-color: #fff;
+    color: var(--grad-clr1);
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+}
+
+#overlayBtn {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 304px;
+    transform: translateX(-50%);
+    width: 143.67px;
+    height: 40px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.overlay {
+    position:relative;
+    background: var(--linear-grad);
+    color: #fff;
+    left: -150%;
+    height: 100%;
+    width: 250%;
+    transition: transform 0.6 ease-in-out;
+}
+
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    text-align: center;
+    height: 100%;
+    width: 340px;
+    transition: 0.6s ease-in-out;
+}
+
+.overlay-left{
+    right: 60%;
+    transform: translateX(-12%);
+}
+
+.overlay-right{
+    right: 0;
+    transform: translateX(0%);
+}
+
+.overlay-panel h1 {
+    color: #fff;
+}
+
+.overlay-panel__text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 25px 0px 35px;
+    margin-bottom: 47px;
+}
+
+.overlay-panel button {
+    border: none;
+    background-color: transparent;
+}
+
+/* Toggles para deslizar las pantallas con js. */
+.right-panel-active .overlay-container {
+    transform: translateX(-150%);
+}
+.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.right-panel-active .overlay-left {
+    transform: translateX(25%);
+}
+
+.right-panel-active .overlay-right {
+    transform: translateX(35%);
+}
+
+.right-panel-active .login__sign-in {
+    transform: translateX(20%);
+    opacity: 0;
+}
+
+.right-panel-active .login__sign-up {
+    transform: translateX(66.7%);
+    opacity: 1;
+    z-index: 5;
+    animation: show 0.6s;
+}
+
+@keyframes show {
+    0%, 50%{
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50.1%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.btnScaled {
+    animation: scaleBtn 0.6s;
+}
+/* Suaviza la transición que desliza las opciones. */
+@keyframes scaleBtn {
+    0% {
+        width: 143.67px;
+    }
+    50% {
+        width: 143.67px;
+    }
+    100% {
+        width: 143.67px;
+    }
+}
+
