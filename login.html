@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,155 +11,168 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
     <link rel="stylesheet" href="assets/fonts/playfair-display/" />
 </head>
+
 <body>
     <div class="layout">
 
+
         <!-- Header con filtro -->
-        <header class="layout__header">
+        <section class="layout__header">
             <!-- Navegador -->
-            <nav class="layout__menu">
-                <h1 class="menu__title">Corpe Legal</h1>
-                
-                <ul class="menu__list">
-                    <li class="menu__option">
-                        <a href="index.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-house"></i>
-                            <span class="menu__overlay">Home</span>
-                        </a>
-                    </li>
+            <header class="menu__navbar">
+                <!-- Logo -->
+                <div class="navbar__logo">
+                    <a href="#" class="navbar__link-logo">
+                        <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light" />
+                    </a>
+                </div>
 
-                    <li class="menu__option">
-                        <a href="sobre-mi.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-user"></i>
-                            <span class="menu__overlay">Opción 1</span>
-                        </a>
-                    </li>
+                <!-- Navegación -->
+                <nav class="navbar__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Casos
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Apoderamiento</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Cálculos procesales</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Documentación
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Representado</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Peritaje</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Inicio</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
 
-                    <li class="menu__option">
-                        <a href="curriculum.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-graduation-cap"></i>
-                            <span class="menu__overlay">Opción 2</span>
-                        </a>
-                    </li>
-
-                    <li class="menu__option">
-                        <a href="portafolio.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-briefcase"></i>
-                            <span class="menu__overlay">Opción 3</span>
-                        </a>
-                    </li>
-
-                    <li class="menu__option">
-                        <a href="blog.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-book"></i>
-                            <span class="menu__overlay">Opción 4</span>
-                        </a>
-                    </li>
-
-                    <li class="menu__option">
-                        <a href="contacto.html" class="menu__link menu__link--active">
-                            <i class="menu__icon fa-solid fa-envelope"></i>
-                            <span class="menu__overlay">Opción 5</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
             <section class="header__filter"></section>
-        </header>
 
+        </section>
 
         <!-- Entrada de datos por formulario para validar credenciales de usuario o introducir nuevas credenciales. -->
-            <div class="layout__login" id="container">
-                <div class="login__form login__sign-up">
-                    <form class="login__form-to-send" action="#">
-                        <h1 class="login__title">Create Account</h1>
+        <div class="layout__login" id="container">
+            <div class="login__form login__sign-up">
+                <form class="login__form-to-send" action="#">
+                    <h1 class="login__title">Crea una cuenta</h1>
+                    <!--
                         <div class="form__social-container">
                             <a href="#" class="social-container__social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social-container__social"><i class="fab fa-google-plus-g"></i></a>
                             <a href="#" class="social-container__social"><i class="fab fa-linkedin-in"></i></a>
                         </div>
-                        <span class="form__login-span">or use your email for registration</span>
-                        <div class="form__login-infield">
-                            <input class="form__login-input" type="text" placeholder="Name" />
-                            <label class="form__login-label"></label>
-                        </div>
-                        <div class="form__login-infield">
-                            <input class="form__login-input" type="email" placeholder="Email" name="email"/>
-                            <label class="form__login-label"></label>
-                        </div>
-                        <div class="form__login-infield">
-                            <input class="form__login-input" type="password" placeholder="Password" />
-                            <label class="form__login-label"></label>
-                        </div>
-                        <button class="form__login-button">Sign Up</button>
-                    </form>
-                </div>
-                <div class="login__form login__sign-in">
-                    <form  class="login__form-to-send" action="#">
-                        <h1 class="login__title">Sign in</h1>
-                        <div class="form__social-container">
-                            <a href="#" class="social-container__social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-container__social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social-container__social"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span class="form__login-span">or use your account</span>
-                        <div class="form__login-infield">
-                            <input class="form__login-input" type="email" placeholder="Email" name="email"/>
-                            <label class="form__login-label"></label>
-                        </div>
-                        <div class="form__login-infield">
-                            <input class="form__login-input" type="password" placeholder="Password" />
-                            <label class="form__login-label"></label>
-                        </div>
-                        <a href="#" class="forgot">Forgot your password?</a>
-                        <button class="form__login-button">Sign In</button>
-                    </form>
-                </div>
-                <div class="overlay-container" id="overlayCon">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-left">
-                            <h1 class="overlay-panel__title">Welcome Back!</h1>
-                            <p class="overlay-panel__text">To keep connected with us please login with your personal info</p>
-                            <button class="overlay-panel__button">Sign In</button>
-                        </div>
-                        <div class="overlay-panel overlay-right">
-                            <h1 class="overlay-panel__title">Hello, Friend!</h1>
-                            <p class="overlay-panel__text">Enter your personal details and start journey with us</p>
-                            <button class="overlay-panel__button">Sign Up</button>
-                        </div>
+                        <span class="form__login-span">or use your email for registration</span> -->
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="text" placeholder="Nombre" />
+                        <label class="form__login-label"></label>
                     </div>
-                    <button id="overlayBtn"></button>
-                </div>
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="email" placeholder="Email" name="email" />
+                        <label class="form__login-label"></label>
+                    </div>
+                    <div class="form__login-infield">
+                        <select class="form__login-input" name="ocupation" placeholder="Ocupación" />
+                            <option value="Abogado">Abogado</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Perito">Perito</option>
+                        </select>
+                    </div>
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="password" placeholder="Contraseña" />
+                        <label class="form__login-label"></label>
+                    </div>
+                    <button class="form__login-button">Sign Up</button>
+                </form>
             </div>
+            <div class="login__form login__sign-in">
+                <form class="login__form-to-send" action="#">
+                    <h1 class="login__title">Entrar</h1>
+                    <!-- 
+                    <div class="form__social-container">
+                        <a href="#" class="social-container__social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-container__social"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="social-container__social"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span class="form__login-span">or use your account</span> -->
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="email" placeholder="Email" name="email" />
+                        <label class="form__login-label"></label>
+                    </div>
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="password" placeholder="Contraseña" />
+                        <label class="form__login-label"></label>
+                    </div>
+                    <a href="#" class="forgot">¿Has olvidado tu contraseña?</a>
+                    <button class="form__login-button">Entrar</button>
+                </form>
+            </div>
+            <div class="overlay-container" id="overlayCon">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-left">
+                        <h1 class="overlay-panel__title">¡Bienvenido!</h1>
+                        <p class="overlay-panel__text">Para acceder a la aplicación introduce tus credenciales
+                        </p>
+                        <button class="overlay-panel__button">Entrar</button>
+                    </div>
+                    <div class="overlay-panel overlay-right">
+                        <h1 class="overlay-panel__title">¡Bienvenido!</h1>
+                        <p class="overlay-panel__text">Introduce tus credenciales para registrarte y acceder a la aplicación</p>
+                        <button class="overlay-panel__button">Regístate</button>
+                    </div>
+                </div>
+                <button id="overlayBtn"></button>
+            </div>
+        </div>
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
-            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20241031/20241031&text=Reunión&details=Revisión+de+proyecto&location=Oficina" target="_blank">
-                Añadir Evento
-            </a>
-            
-
         </footer>
 
         <!-- JS code -->
-         <script>
+        <script>
             const container = document.getElementById('container');
             const overlayCon = document.getElementById('overlayCon');
             const overlayBtn = document.getElementById('overlayBtn');
 
             overlayBtn.addEventListener('click', () => {
                 container.classList.toggle('right-panel-active');
-                
+
                 overlayBtn.classList.remove('btnScaled');
-                window.requestAnimationFrame( () => {
+                window.requestAnimationFrame(() => {
                     overlayBtn.classList.add('btnScaled');
                 });
 
             });
 
 
-         </script>
+        </script>
     </div>
 </body>
+
 </html>

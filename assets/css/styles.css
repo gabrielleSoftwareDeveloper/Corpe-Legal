@@ -4,13 +4,14 @@
     --color-secondary: rgb(49, 122, 93);
     --color-text: #1c1b1b;
     --color-bg-user-cards: #dfdbdb;
-    --linear-grad: linear-gradient(to right, #141E30, #243855);
-    --grad-clr1: #141E30;
+    --linear-grad: linear-gradient(to right, #14302f, #245552);
+    --grad-clr1: #142c30;
     --grad-clr2: #243B55;
+    --bg-color: #ebebeb;
 }
 
 *{
-    font-family: playfair-display;
+    font-family: cinzel, serif; /* Por ver */
     text-decoration: none;
     list-style-type: none;
     padding: 0px;
@@ -23,6 +24,7 @@ body{
     width: 100%;
     height: auto;
     overflow-x: hidden;
+    background-color: var(--bg-color);
 }
 
 .layout{
@@ -35,6 +37,7 @@ body{
 
 .layout__header{
     width: 100%;
+    background-color: var(--color--primary);
 }
 
 .layout__menu{
@@ -42,15 +45,14 @@ body{
     border-bottom:var(--color-secondary);
 }
 
+
 .layout__states{
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin: 0rem;
-    background-color:aliceblue;
-
+    margin: 2rem;
 }
 
 .layout__footer{
@@ -58,46 +60,182 @@ body{
 }
 
 /* Navegador */
+.layout__menu{
+    width: 100%;
+    padding: 3.5rem 3rem;
+}
 
-.menu__list{
-    height: 100%;
+.menu__navbar{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /*Centrado en el eje y.*/
 }
 
-.menu__icon{
-    font-size: 1.5rem;
-    color: rgb(49, 122, 93);
+.navbar__logo{
+    width: 80px;
 }
 
-.menu__title{ 
-    padding: 0;
-    margin: 0;
-    color: var(--color-secondary); 
-    font-size: 23.0686px; 
-    font-family: cinzel, serif; 
-    font-weight: bold; 
-    font-style: normal; 
-    text-anchor: middle; 
-    text-decoration: none; 
-    text-transform: capitalize; 
-
+.navbar__logo-light{
+    margin: 1rem;
+    width: 100%;
 }
 
-.menu__overlay{
-    font-family: cinzel, serif; 
-    font-weight: bold;
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu__navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /*Centrado en el eje y.*/
+}
+
+.nav__item{
+    position: relative;
+    margin: 0 2.4rem; /*Se puede hacer con gap:2.4rem en nav__list pero distancia menos.*/
+}
+
+.nav__title{
+    position: relative;
+    display: inline-block; /*En línea.*/
+    font-weight: 500;
     color: var(--color-text);
+    line-height: 6rem; /*NECESARIO para que al desplazarnos por los submenús el submenú no desaparezca. Descuadrará ligeramente la posición por lo que se debe reajustar.*/
+    transition: all 300ms ease-in-out;
+}
+
+.nav__icon{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 0.2rem;
+    vertical-align: middle;
+    /*Hereda el font-weight del eelemento madre.*/
+}
+
+/*Estilos hover menú desplegable*/
+.nav__title:hover{
+    color: var(--color-primary);
+}
+
+.nav__title::before{ /*Pseudoelemento creado en css*/
+    content: "";
+    height: 0.2rem;
+    width: 0%; /*Se da visibilidad, si está en 0 no. Al hacer hover se verá como se alarga la línea.*/
+    background-color: var(--color-secondary);
+    position: absolute;
+    bottom: 1.2rem;
+    left:0;
+    opacity:0;
+    transition: all 350ms linear; /*500ms solo para que la transición sea más inmediata.*/
+}
+
+.nav__title:hover::before{ /*Efecto*/
+  width: 100%;
+  opacity: 1;
+}
+
+.nav__submenu{
+    display: block; /*Se ocultan momentáneamente mientras se coloca el menú con none.*/
+    position: absolute;
+    top: 100%; /*Aparece naturalmente, se fuerza igualmente con 100%.*/
+    left: 2rem;
+    min-width: 19rem; /*De esta manera no se separan en dos líneas (Diseño Web y no Diseño /n Web)*/
+    /*border: 1px solid red; Al inciio para diferenciar el contenedor*/
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: var(--color--primary);
+    box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 15%);
+    opacity: 0; /*Para lograr el efecto*/
+    visibility: hidden; /*Oculto, así no se pon drán clickar los elementos.*/
+    transition: all 300ms ease-in-out;
+}
+
+.submenu__item{
+    opacity: 0; /*Importante para que se vea la animación posterior*/
+    transform: translateX(2rem);
+    transition: all 100ms ease-in-out;
+
+}
+
+.submenu__title{
+    display:block;
+    position: relative;
+    font-size: 1rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--color-text);
+    padding: 0.7rem 1.5rem;
+    transition: all 300ms ease-in-out;
+}
+
+/*Aparecen los títulos del submenú de manera escalonada.*/
+.submenu__item:nth-child(1){ /*Selección del hijo que se necesite*/
+    transition-delay: 100ms;
+}
+
+.submenu__item:nth-child(2){ 
+    transition-delay: 200ms;
+}
+
+.submenu__item:nth-child(3){ 
+    transition-delay: 300ms;
+}
+
+.submenu__item:nth-child(4){ 
+    transition-delay: 400ms;
+}
+
+.submenu__item:nth-child(5){ 
+    transition-delay: 500ms;
+}
+
+.submenu__item:nth-child(6){ 
+    transition-delay: 600ms;
+}
+
+.nav__item:hover>.nav__submenu{
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    left: 0;
+}
+
+.nav__item:hover .submenu__item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.submenu__title:hover{
+    color: var(--color-secondary);
+}
+
+.submenu__title::after{
+    content: "";
+    height: 0.1rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    top:50%;
+    left:0;
+    transition: all 300ms ease-in-out;
+}
+
+.submenu__title:hover::after{
+    width:  100%;
 }
 
 /* Secciones de los estados */
 
 .states__pendiente{
-    width: 33%;
+    width: 80%;
     border-right: 1px solid var(--color-bg-user-cards);
     padding: 2rem;
+    border-radius: 15px;
 }
 
 /* Opciones */
@@ -113,23 +251,26 @@ body{
     color:var(--color-text);
 }
 
-.states__en-curso{
-    width: 33%;
+.states__en-curso, .states__reservado{
+    width: 80%;
     border-right: 1px solid var(--color-bg-user-cards);
     padding: 2rem;
+    border-radius: 15px;
 
 }
-.states__reservado{
-    width:33%;
+.states__prearchivo{
+    width:50%;
     padding: 2rem;
+    border-radius: 15px;
 
 }
 
 /* Tarjetas de usuario */
 .states__card{
-    background: linear-gradient(180deg, var(--color-bg-user-cards), rgba(255, 255, 255, 0));
+    background: var(--color--primary);
     padding: 7rem 5rem;
     margin-top: 1rem;
+    border-radius: 15px;
 }
 
 
@@ -139,6 +280,7 @@ body{
     position: relative;
     width: 850px;
     height: 500px;
+    margin: 5rem;
     background-color: #ffffff;
     box-shadow: 25px 30px 55px #5557;
     border-radius: 13px;
@@ -174,6 +316,10 @@ body{
 
 .overlay-panel__title, .login__title{
     color: var(--grad-clr1);
+}
+
+.login__title{
+    margin: 1rem;
 }
 
 .form__social-container{
@@ -239,15 +385,20 @@ body{
 .form__login-button, .overlay-panel__button, #overlayBtn {
     border-radius: 20px;
     border: 1px solid var(--grad-clr1);
-    background: var(--grad-clr2);
+    background: var(--grad-clr1);
     color: #fff;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
 }
 
+.overlay-panel__button:hover{
+    opacity: 0.7;
+}
 
 .login__form button {
     margin-top: 17px;
@@ -285,7 +436,7 @@ body{
 
 .overlay {
     position:relative;
-    background: var(--linear-grad);
+    background: var(--linear-grad); /* linear grad */
     color: #fff;
     left: -150%;
     height: 100%;

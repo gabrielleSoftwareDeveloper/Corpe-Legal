@@ -21,57 +21,64 @@
     <div class="layout">
 
         <!-- Header con filtro -->
-        <header class="layout__header">
+        <section class="layout__header">
             <!-- Navegador -->
-            <nav class="layout__menu">
-                <h1 class="menu__title">Corpe Legal</h1>
-                
-                <ul class="menu__list">
-                    <li class="menu__option">
-                        <a href="index.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-house"></i>
-                            <span class="menu__overlay">Home</span>
-                        </a>
-                    </li>
+            <header class="menu__navbar">
+                <!-- Logo -->
+                <div class="navbar__logo">
+                    <a href="#" class="navbar__link-logo">
+                        <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light"/>
+                    </a>
+                </div>
 
-                    <li class="menu__option">
-                        <a href="sobre-mi.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-user"></i>
-                            <span class="menu__overlay">Opción 1</span>
-                        </a>
-                    </li>
+                <!-- Navegación -->
+                 <nav class="navbar__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Casos
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Apoderamiento</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Cálculos procesales</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Documentación
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Representado</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Peritaje</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Inicio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Inicio</a>
+                        </li>
+                    </ul>
+                 </nav>
+           </header> 
 
-                    <li class="menu__option">
-                        <a href="curriculum.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-graduation-cap"></i>
-                            <span class="menu__overlay">Opción 2</span>
-                        </a>
-                    </li>
-
-                    <li class="menu__option">
-                        <a href="portafolio.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-briefcase"></i>
-                            <span class="menu__overlay">Opción 3</span>
-                        </a>
-                    </li>
-
-                    <li class="menu__option">
-                        <a href="blog.html" class="menu__link">
-                            <i class="menu__icon fa-solid fa-book"></i>
-                            <span class="menu__overlay">Opción 4</span>
-                        </a>
-                    </li>
-
-                    <li class="menu__option">
-                        <a href="contacto.html" class="menu__link menu__link--active">
-                            <i class="menu__icon fa-solid fa-envelope"></i>
-                            <span class="menu__overlay">Opción 5</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <section class="header__filter"></section>
-        </header>
+           <section class="header__filter"></section>
+           
+        </section>
 
 
         <!-- Notificaciones de usuarios dependiendo de su estado (pendiente, en curso, reservado) -->
@@ -81,7 +88,7 @@
 
                 <div class="states__users">
                     <div class="users__list">
-                        <label for="pendiente" id="pendiente">Usuarios pendientes</label>
+                        <label class="users__user" for="pendiente" id="pendiente">Usuarios pendientes</label>
                         <select class="users__options" name="pendiente" id="pendiente">
                             <!-- Las opciones provienen de la BBDD -->
                             <option disabled selected value="" class="options__option">Escoge una opción
@@ -99,7 +106,7 @@
                 <div class="states__users">
                     <div class="states__users">
                         <div class="users__list">
-                            <label for="pendiente" id="en-curso">Usuarios en curso</label>
+                            <label class="users__user" for="pendiente" id="en-curso">Usuarios en curso</label>
                             <select class="users__options" name="pendiente" id="pendiente">
                                 <!-- Las opciones provienen de la BBDD -->
                                 <option disabled selected value="" class="options__option options-option-en-curso">
@@ -118,7 +125,7 @@
                 <div class="states__users">
                     <div class="states__users">
                         <div class="users__list">
-                            <label for="pendiente" id="en-curso">Usuarios en reserva</label>
+                            <label class="users__user" for="pendiente" id="en-curso">Usuarios en reserva</label>
                             <select class="users__options" name="pendiente" id="reserva">
                                 <!-- Las opciones provienen de la BBDD -->
                                 <option disabled selected value="" class="options__option options-option-en-curso">
@@ -130,15 +137,36 @@
 
                 <article class="states__card reservado__card"></article>
             </section>
+
+            <section class="states__prearchivo">
+
+                <div class="states__users">
+                    <div class="states__users">
+                        <div class="users__list">
+                            <label class="users__user" for="pendiente" id="en-curso">Prearchivo</label>
+                            <select class="users__options" name="pendiente" id="reserva">
+                                <!-- Las opciones provienen de la BBDD -->
+                                <option disabled selected value="" class="options__option options-option-en-curso">
+                                    Escoge una opción
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                <article class="states__card reservado__card"></article>
+            </section>
+
+
         </div>
 
         <!-- Footer que contiene ??? -->
-        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
-            <a href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20241031/20241031&text=Reunión&details=Revisión+de+proyecto&location=Oficina" target="_blank">
-                Añadir Evento
-            </a>
+        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4rem; padding: 4rem;">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" style="border-radius: 20px;" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
             
+            <a style="cursor: pointer;" href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20241031/20241031&text=Reunión&details=Revisión+de+proyecto&location=Oficina" target="_blank">
+            <button class="overlay-panel__button">
+                Añadir Evento
+            </button></a>
 
         </footer>
 
