@@ -541,3 +541,112 @@ body{
     }
 }
 
+
+/* Documents: zona de drag and drop*/
+.layout__dragdrop{
+    border:2px dashed var(--color--primary);
+    border-radius: 15px;
+    height: 350px;
+    width: 700px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.layout__dragdrop.active{
+    border: 2px solid var(--color--primary);
+}
+
+.dragdrop__icon-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dragdrop__icon{
+    font-size: 100px;
+    color: var(--color--primary);
+}
+
+.dragdrop__text{
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.dragdrop__text--o{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color--primary);
+    margin: 1 rem 0 1.5rem 0;
+}
+
+.dragdrop__text--button{
+    margin-top: 1rem;
+    padding: 10px 25px;
+    border-radius: 15px;
+    background-color: var(--grad-clr1);
+    color: var(--color--primary);
+    cursor: pointer;
+}
+
+.dragdrop__text--button:hover{
+    opacity: 0.8;
+}
+
+/* Estilos de la sección de documentos subidos. */
+.layout__uploadDocuments{
+    max-width: 700px;
+    background-color: var(--color--primary);
+    padding: 30px;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10rem;
+}
+
+.uploadDocuments__title{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--grad-clr2);
+}
+
+.uploadDocuments__showfilebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px 15px;
+    box-shadow: #0000000d 0px 0px 0px 1px,
+    #d1d5db3d 0px 0px 0px 1px inset;
+}
+
+.uploadDocuments__left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filetype{
+    background-color: var(--grad-clr1);
+    color: var(--color--primary);
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.uploadDocuments__left h3{
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.uploadDocuments__icon {
+    color: var(--grad-clr1);
+    font-size: 17px;
+    cursor: pointer;
+}
