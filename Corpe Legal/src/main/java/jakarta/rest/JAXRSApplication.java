@@ -6,8 +6,7 @@ import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
 import static common.Cons.API_RUTA;
-import static common.Cons.USER;
 
 @ApplicationPath(API_RUTA)
-@DeclareRoles({"admin", USER })
+@DeclareRoles({"ABOGADO", "COMERCIAL", "ADMINISTRADOR", "CONTABLE"})
 public class JAXRSApplication extends Application {}
