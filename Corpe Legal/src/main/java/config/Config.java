@@ -30,8 +30,6 @@ public class Config {
             user = (String) p.get(USER);
             password = (String) p.get(PASSWORD);
             driver = (String) p.get(DRIVER);
-            time = Integer.parseInt((String) p.get("time"));
-            llamadas = Integer.parseInt((String) p.get("llamadas"));
         } catch (Exception e) {
             log.error(ERROR_IN_CONFIG + e.getMessage());
         }

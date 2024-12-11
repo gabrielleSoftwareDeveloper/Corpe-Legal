@@ -7,11 +7,14 @@ import java.time.LocalDate;
 
 @Data
 public class Cliente {
+    //pk
+    private String telefono;
     private String DNI;
     private String nombre_apellidos;
     private String direccion;
+    private String localidad;
     private String email;
-    private int telefono;
+
     @Lob
     private byte[]  fotoDNI;
 

@@ -14,21 +14,17 @@ import java.util.List;
 @Getter
 public class Caso {
 
-    //faltan los campos del PASO 6 del PDF
-
-
-    private String expediente;
-    //DNi de Cliete u objeto?
-    private String cliente;
+    private int expediente;
+    //clave forenea
+    private String DNI_cliente;
     private String servicios;
     private LocalDate inicio_prestamo;
     private LocalDate fin_prestamo;
     //el que pasa de comerciales  abogados y vicebersa
     private EstadoCaso estado_caso;
-    private String apoderamiento;
-    //DNI apoderado??
-
+    private String DNI_apoderamiento;
     private String forma;
+    //??
     private String provision;
     private String partido_judicial;
     private LocalDate fecha_expediente;
@@ -43,6 +39,7 @@ public class Caso {
     //cuotas int
     //mensualidad cuotas int
     //pendiente int
+    //provision int
     //pago int
     //fecha_prevista_pago date
     //fecha_real_pago date
@@ -55,8 +52,8 @@ public class Caso {
 
     //faltan por definir??
     private Plazo plazo;
-    private LocalDate fechaJuicio;
-    private String entidadFinanciera;
+    private LocalDate fecha_juicio;
+    private String entidad_financiera;
     private String asesor;
     private String abogado;
     private String procurador;

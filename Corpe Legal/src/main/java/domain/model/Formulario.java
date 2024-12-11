@@ -6,8 +6,9 @@ import java.util.List;
 
 @Data
 public class Formulario {
-    private String nombre;
-    private String correo;
-    private String notas;
+    private String telefono;
+    private String nombre_apellidos;
+    private String email;
+    private String observaciones;
     private List<Documento> documentos;
 }
