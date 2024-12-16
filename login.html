@@ -31,7 +31,21 @@
                 <nav class="navbar__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Inicio</a>
+                            <a href="login.html" class="nav__title" target="_blank">Inicio</a>
+                        </li>
+                        <!-- Solo disponible para el administrador -->
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Administrar
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="register.html" class="submenu__title">Añadir usuario</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Eliminar usuario</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__title">Casos
@@ -39,34 +53,62 @@
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Apoderamiento</a>
+                                    <a href="#" class="submenu__title">¿Cómo va mi caso?</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Cálculos procesales</a>
+                                    <a href="#" class="submenu__title">Cartera de casos</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                    <a href="#" class="submenu__title">Estudio de viabilidad</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Expedientes</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="calendar.html" class="submenu__title">Calendario</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Documentación
+                            <a href="" class="nav__title">Documentación
                                 <i class="fa-solid fa-chevron-down nav__icon"></i>
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Representado</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Peritaje</a>
+                                    <a href="documents.html" class="submenu__title">Subir documentos</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Inicio</a>
+                            <a href="#" class="nav__title">Contabilidad</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Inicio</a>
+                            <a href="#" class="nav__title">Enlaces externos
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Cálculo costas procesales</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Partido judicial</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Firmafy</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Legal Pigeon</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Corpe Legal</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Cerrar sesión</a>
                         </li>
                     </ul>
                 </nav>
@@ -78,48 +120,10 @@
 
         <!-- Entrada de datos por formulario para validar credenciales de usuario o introducir nuevas credenciales. -->
         <div class="layout__login" id="container">
-            <div class="login__form login__sign-up">
-                <form class="login__form-to-send" action="#">
-                    <h1 class="login__title">Crea una cuenta</h1>
-                    <!--
-                        <div class="form__social-container">
-                            <a href="#" class="social-container__social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-container__social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social-container__social"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                        <span class="form__login-span">or use your email for registration</span> -->
-                    <div class="form__login-infield">
-                        <input class="form__login-input" type="text" placeholder="Nombre" />
-                        <label class="form__login-label"></label>
-                    </div>
-                    <div class="form__login-infield">
-                        <input class="form__login-input" type="email" placeholder="Email" name="email" />
-                        <label class="form__login-label"></label>
-                    </div>
-                    <div class="form__login-infield">
-                        <select class="form__login-input" name="ocupation" placeholder="Ocupación" />
-                            <option value="Abogado">Abogado</option>
-                            <option value="Administrador">Administrador</option>
-                            <option value="Perito">Perito</option>
-                        </select>
-                    </div>
-                    <div class="form__login-infield">
-                        <input class="form__login-input" type="password" placeholder="Contraseña" />
-                        <label class="form__login-label"></label>
-                    </div>
-                    <button class="form__login-button">Regístate</button>
-                </form>
-            </div>
+
             <div class="login__form login__sign-in">
                 <form class="login__form-to-send" action="#">
                     <h1 class="login__title">Entrar</h1>
-                    <!-- 
-                    <div class="form__social-container">
-                        <a href="#" class="social-container__social"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-container__social"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#" class="social-container__social"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <span class="form__login-span">or use your account</span> -->
                     <div class="form__login-infield">
                         <input class="form__login-input" type="email" placeholder="Email" name="email" />
                         <label class="form__login-label"></label>
@@ -132,18 +136,13 @@
                     <button class="form__login-button">Entrar</button>
                 </form>
             </div>
+
             <div class="overlay-container" id="overlayCon">
                 <div class="overlay">
-                    <div class="overlay-panel overlay-left">
-                        <h1 class="overlay-panel__title">¡Bienvenido!</h1>
-                        <p class="overlay-panel__text">Para acceder a la aplicación introduce tus credenciales
-                        </p>
-                        <button class="overlay-panel__button">Entrar</button>
-                    </div>
                     <div class="overlay-panel overlay-right">
-                        <h1 class="overlay-panel__title">¡Bienvenido!</h1>
-                        <p class="overlay-panel__text">Introduce tus credenciales para registrarte y acceder a la aplicación</p>
-                        <button class="overlay-panel__button">Regístate</button>
+                        <h1 class="overlay-panel__title">¡Bienvenidx!</h1>
+                        <p class="overlay-panel__text">Introduce tus credenciales para acceder a la aplicación o sigue el estado de tu caso.</p>
+                        <button class="overlay-panel__button">Sigue tu caso</button>
                     </div>
                 </div>
                 <button id="overlayBtn"></button>
@@ -153,26 +152,8 @@
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
         </footer>
-
-        <!-- JS code -->
-        <script>
-            const container = document.getElementById('container');
-            const overlayCon = document.getElementById('overlayCon');
-            const overlayBtn = document.getElementById('overlayBtn');
-
-            overlayBtn.addEventListener('click', () => {
-                container.classList.toggle('right-panel-active');
-
-                overlayBtn.classList.remove('btnScaled');
-                window.requestAnimationFrame(() => {
-                    overlayBtn.classList.add('btnScaled');
-                });
-
-            });
-
-
-        </script>
     </div>
+    
 </body>
 
 </html>

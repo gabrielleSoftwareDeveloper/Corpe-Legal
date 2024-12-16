@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro de usuarios</title>
     <link rel="icon" href="assets/img/logo-corpe-legal.png" />
     <!-- Fuentes y estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -30,8 +30,8 @@
                 <!-- Navegación -->
                 <nav class="navbar__nav">
                     <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="login.html" class="nav__title" target="_blank">Inicio</a>
+                        <li class="nav__item" hidden>
+                            <a href="#" class="nav__title">Inicio</a>
                         </li>
                         <!-- Solo disponible para el administrador -->
                         <li class="nav__item">
@@ -40,7 +40,7 @@
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="register.html" class="submenu__title">Añadir usuario</a>
+                                    <a href="#" class="submenu__title">Añadir usuario</a>
                                 </li>
                                 <li class="submenu__item">
                                     <a href="#" class="submenu__title">Eliminar usuario</a>
@@ -70,12 +70,12 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__title">Documentación
+                            <a href="#" class="nav__title">Documentación
                                 <i class="fa-solid fa-chevron-down nav__icon"></i>
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="documents.html" class="submenu__title">Subir documentos</a>
+                                    <a href="#" class="submenu__title">Representado</a>
                                 </li>
                             </ul>
                         </li>
@@ -118,36 +118,44 @@
 
         </section>
 
-        <!-- Entrada de documentos. -->
+        <!-- Entrada de datos por formulario para validar credenciales de usuario o introducir nuevas credenciales. -->
+        <div class="layout__login" id="container">
+            <div class="login__form login__sign-up">
+                <form class="login__form-to-send" action="#">
+                    <h1 class="login__title">Crea una cuenta</h1>
 
-        <form class="form__documents" action="">
-            <h3 class="documents__title">ID de su caso</h3>
-            <input type="number" class="documents__input" placeholder="Introduzca el número de su caso" />
-            <section class="layout__dragdrop">
-                <label for="file" class="dragdrop__icon-container">
-                    <i class="dragdrop__icon fa-solid fa-cloud-arrow-up"></i>
-                    <label for="file" class="dragdrop__text--button">Suba un archivo</label>
-                    <input type="file" name="file" id="file" class="dragdrop__file" hidden>
-                </label>
-            </section>
-
-            <!-- Muestra de documentos cargados. -->
-            <section class="layout__uploadDocuments" id="layout__uploadDocuments">
-                <h3 class="uploadDocuments__title">Documentos cargados</h3>
-                <!--
-                <div class="uploadDocuments__showfilebox"> 
-                    <div class="uploadDocuments__left">
-                        <span class="filetype">PDF</span>
-                        <h3>Documento.pdf</h3>
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="text" placeholder="Nombre" />
+                        <label class="form__login-label"></label>
                     </div>
-                    <div class="uploadDocuments__right">
-                        <i class="uploadDocuments__icon fa-solid fa-x"></i>
-                    </div> 
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="email" placeholder="Email" name="email" />
+                        <label class="form__login-label"></label>
+                    </div>
+                    <div class="form__login-infield">
+                        <select class="form__login-input" name="ocupation" placeholder="Ocupación" />
+                            <option value="Abogado">Abogado</option>
+                            <option value="Administrador">Administrador</option>
+                            <option value="Perito">Perito</option>
+                        </select>
+                    </div>
+                    <div class="form__login-infield">
+                        <input class="form__login-input" type="password" placeholder="Contraseña" />
+                        <label class="form__login-label"></label>
+                    </div>
+                    <button class="form__login-button">Regístate</button>
+                </form>
+            </div>
+
+            <div class="overlay-container" id="overlayCon">
+                <div class="overlay">
+                    <div class="overlay-panel overlay-right">
+                        <h1 class="overlay-panel__title">¡Bienvenidx!</h1>
+                        <p class="overlay-panel__text">Introduce tus credenciales para registrarte y acceder a la aplicación.</p>
+                    </div>
                 </div>
-                -->
-            </section>
-            <button class="form__button">Enviar</button>
-        </form>
+            </div>
+        </div>
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
@@ -155,17 +163,22 @@
 
         <!-- JS code -->
         <script>
-            //Permite que, al ocultar el input con html, continúe funcionando la transferencia de archivos.
-            document.addEventListener('dragover', (e) => {
-                e.preventDefault()
-            });
-            document.addEventListener('drop', (e) => {
-                document.getElementById('file').files = e.dataTransfer.files;
-                e.preventDefault()
+            const container = document.getElementById('container');
+            const overlayCon = document.getElementById('overlayCon');
+            const overlayBtn = document.getElementById('overlayBtn');
+
+            overlayBtn.addEventListener('click', () => {
+                container.classList.toggle('right-panel-active');
+
+                overlayBtn.classList.remove('btnScaled');
+                window.requestAnimationFrame(() => {
+                    overlayBtn.classList.add('btnScaled');
+                });
+
             });
         </script>
-        <script src="assets/script.js"></script>
     </div>
+    
 </body>
 
 </html>

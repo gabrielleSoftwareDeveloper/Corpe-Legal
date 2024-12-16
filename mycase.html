@@ -15,7 +15,6 @@
 <body>
     <div class="layout">
 
-
         <!-- Header con filtro -->
         <section class="layout__header">
             <!-- Navegador -->
@@ -118,36 +117,22 @@
 
         </section>
 
-        <!-- Entrada de documentos. -->
+        <!-- Mis casos. -->
+        <section class="layout__mycase">
 
-        <form class="form__documents" action="">
-            <h3 class="documents__title">ID de su caso</h3>
-            <input type="number" class="documents__input" placeholder="Introduzca el número de su caso" />
-            <section class="layout__dragdrop">
-                <label for="file" class="dragdrop__icon-container">
-                    <i class="dragdrop__icon fa-solid fa-cloud-arrow-up"></i>
-                    <label for="file" class="dragdrop__text--button">Suba un archivo</label>
-                    <input type="file" name="file" id="file" class="dragdrop__file" hidden>
-                </label>
+            <!-- Entrada de ID. -->
+            <form class="form__mycase" action="">
+                <h3 class="mycase__title">ID de su caso</h3>
+                <input type="number" class="mycase__input" placeholder="Introduzca el número de su caso" />
+                <button class="form__button">Enviar</button>
+            </form>
+
+            <!-- Tabla con los datos sobre el cASO.-->
+            <section class="mycase__table-container">
+                <table></table>
             </section>
 
-            <!-- Muestra de documentos cargados. -->
-            <section class="layout__uploadDocuments" id="layout__uploadDocuments">
-                <h3 class="uploadDocuments__title">Documentos cargados</h3>
-                <!--
-                <div class="uploadDocuments__showfilebox"> 
-                    <div class="uploadDocuments__left">
-                        <span class="filetype">PDF</span>
-                        <h3>Documento.pdf</h3>
-                    </div>
-                    <div class="uploadDocuments__right">
-                        <i class="uploadDocuments__icon fa-solid fa-x"></i>
-                    </div> 
-                </div>
-                -->
-            </section>
-            <button class="form__button">Enviar</button>
-        </form>
+        </section>
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">

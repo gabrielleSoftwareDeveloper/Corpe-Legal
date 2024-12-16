@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Corpe Legal - CRM</title>
     <link rel="icon" href="assets/img/logo-corpe-legal.png" />
     <!-- Fuentes y estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
     <link rel="stylesheet" href="assets/fonts/playfair-display/" />
+    <!-- API Calendario Google -->
+    <script src="https://apis.google.com/js/api.js"></script>
+
+
 </head>
 
 <body>
-    <div class="layout">
 
+    <div class="layout">
 
         <!-- Header con filtro -->
         <section class="layout__header">
@@ -30,8 +34,8 @@
                 <!-- Navegación -->
                 <nav class="navbar__nav">
                     <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="login.html" class="nav__title" target="_blank">Inicio</a>
+                        <li class="nav__item" hidden>
+                            <a href="#" class="nav__title">Inicio</a>
                         </li>
                         <!-- Solo disponible para el administrador -->
                         <li class="nav__item">
@@ -40,7 +44,7 @@
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="register.html" class="submenu__title">Añadir usuario</a>
+                                    <a href="#" class="submenu__title">Añadir usuario</a>
                                 </li>
                                 <li class="submenu__item">
                                     <a href="#" class="submenu__title">Eliminar usuario</a>
@@ -70,12 +74,12 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__title">Documentación
+                            <a href="#" class="nav__title">Documentación
                                 <i class="fa-solid fa-chevron-down nav__icon"></i>
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="documents.html" class="submenu__title">Subir documentos</a>
+                                    <a href="#" class="submenu__title">Representado</a>
                                 </li>
                             </ul>
                         </li>
@@ -117,54 +121,21 @@
             <section class="header__filter"></section>
 
         </section>
-
-        <!-- Entrada de documentos. -->
-
-        <form class="form__documents" action="">
-            <h3 class="documents__title">ID de su caso</h3>
-            <input type="number" class="documents__input" placeholder="Introduzca el número de su caso" />
-            <section class="layout__dragdrop">
-                <label for="file" class="dragdrop__icon-container">
-                    <i class="dragdrop__icon fa-solid fa-cloud-arrow-up"></i>
-                    <label for="file" class="dragdrop__text--button">Suba un archivo</label>
-                    <input type="file" name="file" id="file" class="dragdrop__file" hidden>
-                </label>
-            </section>
-
-            <!-- Muestra de documentos cargados. -->
-            <section class="layout__uploadDocuments" id="layout__uploadDocuments">
-                <h3 class="uploadDocuments__title">Documentos cargados</h3>
-                <!--
-                <div class="uploadDocuments__showfilebox"> 
-                    <div class="uploadDocuments__left">
-                        <span class="filetype">PDF</span>
-                        <h3>Documento.pdf</h3>
-                    </div>
-                    <div class="uploadDocuments__right">
-                        <i class="uploadDocuments__icon fa-solid fa-x"></i>
-                    </div> 
-                </div>
-                -->
-            </section>
-            <button class="form__button">Enviar</button>
-        </form>
+        
+        <!-- Notificaciones de usuarios dependiendo de su estado (pendiente, en curso, reservado) -->
+        <div class="layout__calendar" style="width: 100%;">
 
         <!-- Footer que contiene ??? -->
-        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
+        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4rem; padding: 4rem;">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" style="border-radius: 20px;" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
+            
+            <a style="cursor: pointer;" href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20241031/20241031&text=Reunión&details=Revisión+de+proyecto&location=Oficina" target="_blank">
+            <button class="overlay-panel__button">
+                Añadir Evento
+            </button></a>
+
         </footer>
 
-        <!-- JS code -->
-        <script>
-            //Permite que, al ocultar el input con html, continúe funcionando la transferencia de archivos.
-            document.addEventListener('dragover', (e) => {
-                e.preventDefault()
-            });
-            document.addEventListener('drop', (e) => {
-                document.getElementById('file').files = e.dataTransfer.files;
-                e.preventDefault()
-            });
-        </script>
-        <script src="assets/script.js"></script>
     </div>
 </body>
 
