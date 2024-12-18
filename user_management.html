@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentación</title>
+    <title>Gestión de usuarios</title>
     <link rel="icon" href="assets/img/logo-corpe-legal.png" />
     <!-- Fuentes y estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -14,7 +14,6 @@
 
 <body>
     <div class="layout">
-
 
         <!-- Header con filtro -->
         <section class="layout__header">
@@ -53,7 +52,10 @@
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">¿Cómo va mi caso?</a>
+                                    <a href="mycase.html" class="submenu__title">¿Cómo va mi caso?</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Modificar el estado de un caso</a>
                                 </li>
                                 <li class="submenu__item">
                                     <a href="#" class="submenu__title">Cartera de casos</a>
@@ -65,7 +67,7 @@
                                     <a href="#" class="submenu__title">Expedientes</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Calendario</a>
+                                    <a href="calendar.html" class="submenu__title">Calendario</a>
                                 </li>
                             </ul>
                         </li>
@@ -118,54 +120,91 @@
 
         </section>
 
-        <!-- Entrada de documentos. -->
+        <section class="layout__user-management">
 
-        <form class="form__documents" action="">
-            <h3 class="documents__title">ID de su caso</h3>
-            <input type="number" class="documents__input" placeholder="Introduzca el número de su caso" />
-            <section class="layout__dragdrop">
-                <label for="file" class="dragdrop__icon-container">
-                    <i class="dragdrop__icon fa-solid fa-cloud-arrow-up"></i>
-                    <label for="file" class="dragdrop__text--button">Suba un archivo</label>
-                    <input type="file" name="file" id="file" class="dragdrop__file" hidden>
-                </label>
-            </section>
+            <h3 class="user-management__title">Gestión de usuarios</h3>
 
-            <!-- Muestra de documentos cargados. -->
-            <section class="layout__uploadDocuments" id="layout__uploadDocuments">
-                <h3 class="uploadDocuments__title">Documentos cargados</h3>
-                <!--
-                <div class="uploadDocuments__showfilebox"> 
-                    <div class="uploadDocuments__left">
-                        <span class="filetype">PDF</span>
-                        <h3>Documento.pdf</h3>
-                    </div>
-                    <div class="uploadDocuments__right">
-                        <i class="uploadDocuments__icon fa-solid fa-x"></i>
-                    </div> 
-                </div>
-                -->
-            </section>
-            <button class="form__button">Enviar</button>
-        </form>
+            <table class="user-management__table">
+                <thead>
+                    <tr>
+                        <th>ID de expediente</th>
+                        <th>Cliente</th>
+                        <th>Reclamación previa</th>
+                        <th>Contestación reclamación</th>
+                        <th>Días transcurridos</th>
+                        <th>APUD ACTA</th>
+                        <th>Fecha audiencia previa</th>
+                        <th>Fecha juicio</th>
+                        <th>Documentación</th>
+                        <th>Sentencia</th>
+                        <th>Archivar caso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fila 1 Columna 1</td>
+                        <td>Fila 1 Columna 2</td>
+                        <td>Fila 1 Columna 3</td>
+                        <td>Fila 1 Columna 4</td>
+                        <td>Fila 1 Columna 5</td>
+                        <td>Fila 1 Columna 6</td>
+                        <td>Fila 1 Columna 1</td>
+                        <td>Fila 1 Columna 2</td>
+                        <td>Fila 1 Columna 3</td>
+                        <td>Fila 1 Columna 4</td>
+                        <td class="user-management__iconContainer"><i class="user-management__icon fa-solid fa-x"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2 Columna 1</td>
+                        <td>Fila 2 Columna 2</td>
+                        <td>Fila 2 Columna 3</td>
+                        <td>Fila 2 Columna 4</td>
+                        <td>Fila 2 Columna 5</td>
+                        <td>Fila 2 Columna 6</td>
+                        <td>Fila 2 Columna 1</td>
+                        <td>Fila 2 Columna 2</td>
+                        <td>Fila 2 Columna 3</td>
+                        <td>Fila 2 Columna 4</td>
+                        <td class="user-management__iconContainer"><i class="user-management__icon fa-solid fa-x"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3 Columna 1</td>
+                        <td>Fila 3 Columna 2</td>
+                        <td>Fila 3 Columna 3</td>
+                        <td>Fila 3 Columna 4</td>
+                        <td>Fila 3 Columna 5</td>
+                        <td>Fila 3 Columna 6</td>
+                        <td>Fila 3 Columna 1</td>
+                        <td>Fila 3 Columna 2</td>
+                        <td>Fila 3 Columna 3</td>
+                        <td>Fila 3 Columna 4</td>
+                        <td>Fila 3 Columna 4</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 4 Columna 1</td>
+                        <td>Fila 4 Columna 2</td>
+                        <td>Fila 4 Columna 3</td>
+                        <td>Fila 4 Columna 4</td>
+                        <td>Fila 4 Columna 5</td>
+                        <td>Fila 4 Columna 6</td>
+                        <td>Fila 4 Columna 1</td>
+                        <td>Fila 4 Columna 2</td>
+                        <td>Fila 4 Columna 3</td>
+                        <td>Fila 4 Columna 4</td>
+                        <td>Fila 4 Columna 4</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
         </footer>
-
-        <!-- JS code -->
-        <script>
-            //Permite que, al ocultar el input con html, continúe funcionando la transferencia de archivos.
-            document.addEventListener('dragover', (e) => {
-                e.preventDefault()
-            });
-            document.addEventListener('drop', (e) => {
-                document.getElementById('file').files = e.dataTransfer.files;
-                e.preventDefault()
-            });
-        </script>
         <script src="assets/script.js"></script>
+
     </div>
+    
 </body>
 
 </html>

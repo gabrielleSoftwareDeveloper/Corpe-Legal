@@ -1,5 +1,5 @@
 /* Estilos generales */
-:root{
+:root {
     --color--primary: #ffffff;
     --color-secondary: rgb(49, 122, 93);
     --color-text: #1c1b1b;
@@ -10,16 +10,17 @@
     --bg-color: #ebebeb;
 }
 
-*{
-    font-family: cinzel, serif; /* Por ver */
+* {
+    font-family: cinzel, serif;
+    /* Por ver */
     text-decoration: none;
     list-style-type: none;
     padding: 0px;
-    margin:0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     width: 100%;
     height: auto;
@@ -27,7 +28,11 @@ body{
     background-color: var(--bg-color);
 }
 
-.layout{
+.layout,
+.layout__accounting,
+.layout__cases,
+.layout__user-management,
+.layout__clientfile {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,18 +40,17 @@ body{
     justify-content: center;
 }
 
-.layout__header{
+.layout__header {
     width: 100%;
     background-color: var(--color--primary);
 }
 
-.layout__menu{
+.layout__menu {
     width: 100%;
-    border-bottom:var(--color-secondary);
+    border-bottom: var(--color-secondary);
 }
 
-
-.layout__states{
+.layout__states {
     width: 100%;
     height: 40vh;
     display: flex;
@@ -55,60 +59,81 @@ body{
     margin: 2rem;
 }
 
-.layout__footer{
+.layout__footer,
+.layout__mycase {
     width: 100%;
 }
 
+.layout__mycase {
+    width: 50%;
+}
+
+.layout__accounting,
+.layout__cases,
+.layout__user-management {
+    margin: 4rem;
+}
+
+.layout__cases--documentation {
+    margin-top: 0;
+}
+
+
 /* Navegador */
-.layout__menu{
+.layout__menu {
     width: 100%;
     padding: 3.5rem 3rem;
 }
 
-.menu__navbar{
+.menu__navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; /*Centrado en el eje y.*/
+    align-items: center;
+    /*Centrado en el eje y.*/
 }
 
-.navbar__logo{
+.navbar__logo {
     width: 80px;
 }
 
-.navbar__logo-light{
+.navbar__logo-light {
     margin: 1rem;
     width: 100%;
 }
 
-.nav__list{
+.nav__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.menu__navbar{
+.menu__navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center; /*Centrado en el eje y.*/
+    align-items: center;
+    /*Centrado en el eje y.*/
 }
 
-.nav__item{
+.nav__item {
     position: relative;
-    margin: 0 2.4rem; /*Se puede hacer con gap:2.4rem en nav__list pero distancia menos.*/
+    margin: 0 2.4rem;
+    /*Se puede hacer con gap:2.4rem en nav__list pero distancia menos.*/
 }
 
-.nav__title{
+.nav__title {
     position: relative;
-    display: inline-block; /*En línea.*/
+    display: inline-block;
+    /*En línea.*/
     font-weight: 500;
     color: var(--color-text);
-    line-height: 6rem; /*NECESARIO para que al desplazarnos por los submenús el submenú no desaparezca. Descuadrará ligeramente la posición por lo que se debe reajustar.*/
+    line-height: 6rem;
+    /*NECESARIO para que al desplazarnos por los submenús el submenú no desaparezca. Descuadrará ligeramente la posición por lo que se debe reajustar.*/
     transition: all 300ms ease-in-out;
 }
 
-.nav__icon{
+.nav__icon {
     font-size: 1rem;
     font-weight: bold;
     padding-left: 0.2rem;
@@ -117,52 +142,62 @@ body{
 }
 
 /*Estilos hover menú desplegable*/
-.nav__title:hover{
+.nav__title:hover {
     color: var(--color-primary);
 }
 
-.nav__title::before{ /*Pseudoelemento creado en css*/
+.nav__title::before {
+    /*Pseudoelemento creado en css*/
     content: "";
     height: 0.2rem;
-    width: 0%; /*Se da visibilidad, si está en 0 no. Al hacer hover se verá como se alarga la línea.*/
+    width: 0%;
+    /*Se da visibilidad, si está en 0 no. Al hacer hover se verá como se alarga la línea.*/
     background-color: var(--color-secondary);
     position: absolute;
     bottom: 1.2rem;
-    left:0;
-    opacity:0;
-    transition: all 350ms linear; /*500ms solo para que la transición sea más inmediata.*/
+    left: 0;
+    opacity: 0;
+    transition: all 350ms linear;
+    /*500ms solo para que la transición sea más inmediata.*/
 }
 
-.nav__title:hover::before{ /*Efecto*/
-  width: 100%;
-  opacity: 1;
+.nav__title:hover::before {
+    /*Efecto*/
+    width: 100%;
+    opacity: 1;
 }
 
-.nav__submenu{
-    display: block; /*Se ocultan momentáneamente mientras se coloca el menú con none.*/
+.nav__submenu {
+    display: block;
+    /*Se ocultan momentáneamente mientras se coloca el menú con none.*/
     position: absolute;
-    top: 100%; /*Aparece naturalmente, se fuerza igualmente con 100%.*/
+    top: 100%;
+    /*Aparece naturalmente, se fuerza igualmente con 100%.*/
     left: 2rem;
-    min-width: 19rem; /*De esta manera no se separan en dos líneas (Diseño Web y no Diseño /n Web)*/
+    min-width: 19rem;
+    /*De esta manera no se separan en dos líneas (Diseño Web y no Diseño /n Web)*/
     /*border: 1px solid red; Al inciio para diferenciar el contenedor*/
     padding: 0.5rem 1rem;
     border-radius: 4px;
     background-color: var(--color--primary);
     box-shadow: 0px 13px 48px 0 rgba(0, 0, 0, 15%);
-    opacity: 0; /*Para lograr el efecto*/
-    visibility: hidden; /*Oculto, así no se podrán clickar los elementos.*/
+    opacity: 0;
+    /*Para lograr el efecto*/
+    visibility: hidden;
+    /*Oculto, así no se podrán clickar los elementos.*/
     transition: all 300ms ease-in-out;
 }
 
-.submenu__item{
-    opacity: 0; /*Importante para que se vea la animación posterior*/
+.submenu__item {
+    opacity: 0;
+    /*Importante para que se vea la animación posterior*/
     transform: translateX(2rem);
     transition: all 100ms ease-in-out;
 
 }
 
-.submenu__title{
-    display:block;
+.submenu__title {
+    display: block;
     position: relative;
     font-size: 1rem;
     /*text-transform: capitalize;*/
@@ -174,31 +209,32 @@ body{
 }
 
 /*Aparecen los títulos del submenú de manera escalonada.*/
-.submenu__item:nth-child(1){ /*Selección del hijo que se necesite*/
+.submenu__item:nth-child(1) {
+    /*Selección del hijo que se necesite*/
     transition-delay: 100ms;
 }
 
-.submenu__item:nth-child(2){ 
+.submenu__item:nth-child(2) {
     transition-delay: 200ms;
 }
 
-.submenu__item:nth-child(3){ 
+.submenu__item:nth-child(3) {
     transition-delay: 300ms;
 }
 
-.submenu__item:nth-child(4){ 
+.submenu__item:nth-child(4) {
     transition-delay: 400ms;
 }
 
-.submenu__item:nth-child(5){ 
+.submenu__item:nth-child(5) {
     transition-delay: 500ms;
 }
 
-.submenu__item:nth-child(6){ 
+.submenu__item:nth-child(6) {
     transition-delay: 600ms;
 }
 
-.nav__item:hover>.nav__submenu{
+.nav__item:hover>.nav__submenu {
     opacity: 1;
     visibility: visible;
     z-index: 999;
@@ -210,28 +246,28 @@ body{
     transform: translateX(0);
 }
 
-.submenu__title:hover{
+.submenu__title:hover {
     color: var(--color-secondary);
 }
 
-.submenu__title::after{
+.submenu__title::after {
     content: "";
     height: 0.1rem;
     width: 0;
     background-color: var(--color-primary);
     position: absolute;
-    top:50%;
-    left:0;
+    top: 50%;
+    left: 0;
     transition: all 300ms ease-in-out;
 }
 
-.submenu__title:hover::after{
-    width:  100%;
+.submenu__title:hover::after {
+    width: 100%;
 }
 
 /* Secciones de los estados */
 
-.states__pendiente{
+.states__pendiente {
     width: 80%;
     border-right: 1px solid var(--color-bg-user-cards);
     padding: 2rem;
@@ -239,34 +275,36 @@ body{
 }
 
 /* Opciones */
-#pendiente{
-    color:var(--color-text);
+#pendiente {
+    color: var(--color-text);
 }
 
-#en-curso{
-    color:var(--color-text);
+#en-curso {
+    color: var(--color-text);
 }
 
-#reserva{
-    color:var(--color-text);
+#reserva {
+    color: var(--color-text);
 }
 
-.states__en-curso, .states__reservado{
+.states__en-curso,
+.states__reservado {
     width: 80%;
     border-right: 1px solid var(--color-bg-user-cards);
     padding: 2rem;
     border-radius: 15px;
 
 }
-.states__prearchivo{
-    width:50%;
+
+.states__prearchivo {
+    width: 50%;
     padding: 2rem;
     border-radius: 15px;
 
 }
 
 /* Tarjetas de usuario */
-.states__card{
+.states__card {
     background: var(--color--primary);
     padding: 7rem 5rem;
     margin-top: 1rem;
@@ -276,7 +314,7 @@ body{
 
 /* LOGIN / REGISTER */
 
-.layout__login{
+.layout__login {
     position: relative;
     width: 850px;
     height: 500px;
@@ -287,23 +325,23 @@ body{
     overflow: hidden;
 }
 
-.login__form{
+.login__form {
     position: absolute;
     width: 60%;
     height: 100%;
 
 }
 
-.login__sign-up{
+.login__sign-up {
     z-index: 1;
 }
 
-.login__sign-in{
+.login__sign-in {
     z-index: 2;
 }
 
 /* Etiqueta form */
-.login__form-to-send{
+.login__form-to-send {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -313,19 +351,20 @@ body{
 }
 
 
-.overlay-panel__title, .login__title{
+.overlay-panel__title,
+.login__title {
     color: var(--grad-clr1);
 }
 
-.login__title{
+.login__title {
     margin: 1rem;
 }
 
-.form__social-container{
+.form__social-container {
     margin: 20px 0px;
 }
 
-.social-container a{
+.social-container a {
     border: 1px solid #DDD;
     border-radius: 50%;
     display: inline-flex;
@@ -336,17 +375,18 @@ body{
     width: 40px;
 }
 
-.form__login-span, .menu__overlay{
+.form__login-span,
+.menu__overlay {
     font-size: 12px;
 }
 
-.form__login-infield{
+.form__login-infield {
     position: relative;
     margin: 8px 0px;
     width: 100%;
 }
 
-.form__login-input{
+.form__login-input {
     width: 100%;
     padding: 12px 8px;
     background-color: #f3f3f3;
@@ -354,7 +394,7 @@ body{
     outline: none;
 }
 
-.form__login-label{
+.form__login-label {
     position: absolute;
     left: 50%;
     top: 100%;
@@ -365,23 +405,26 @@ body{
     transition: 0.3s;
 }
 
-.form__login-input:focus ~ .form__login-label {
+.form__login-input:focus~.form__login-label {
     width: 100%;
 }
 
-.social-container__social, .forgot{
+.social-container__social,
+.forgot {
     color: #333;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0px;
 }
 
-.forgot{
+.forgot {
     padding-bottom: 3px;
     border-bottom: 2px solid #EEE;
 }
 
-.form__login-button, .overlay-panel__button, #overlayBtn {
+.form__login-button,
+.overlay-panel__button,
+#overlayBtn {
     border-radius: 20px;
     border: 1px solid var(--grad-clr1);
     background: var(--grad-clr1);
@@ -395,7 +438,7 @@ body{
     cursor: pointer;
 }
 
-.overlay-panel__button:hover{
+.overlay-panel__button:hover {
     opacity: 0.7;
 }
 
@@ -434,8 +477,9 @@ body{
 }
 
 .overlay {
-    position:relative;
-    background: var(--linear-grad); /* linear grad */
+    position: relative;
+    background: var(--linear-grad);
+    /* linear grad */
     color: #fff;
     left: -150%;
     height: 100%;
@@ -443,7 +487,7 @@ body{
     transition: transform 0.6 ease-in-out;
 }
 
-.overlay-panel{
+.overlay-panel {
     position: absolute;
     display: flex;
     align-items: center;
@@ -456,12 +500,12 @@ body{
     transition: 0.6s ease-in-out;
 }
 
-.overlay-left{
+.overlay-left {
     right: 60%;
     transform: translateX(-12%);
 }
 
-.overlay-right{
+.overlay-right {
     right: 0;
     transform: translateX(0%);
 }
@@ -488,6 +532,7 @@ body{
 .right-panel-active .overlay-container {
     transform: translateX(-150%);
 }
+
 .right-panel-active .overlay {
     transform: translateX(50%);
 }
@@ -513,12 +558,15 @@ body{
 }
 
 @keyframes show {
-    0%, 50%{
+
+    0%,
+    50% {
         opacity: 0;
         z-index: 1;
     }
 
-    50.1%, 100% {
+    50.1%,
+    100% {
         opacity: 1;
         z-index: 5;
     }
@@ -527,14 +575,17 @@ body{
 .btnScaled {
     animation: scaleBtn 0.6s;
 }
+
 /* Suaviza la transición que desliza las opciones. */
 @keyframes scaleBtn {
     0% {
         width: 143.67px;
     }
+
     50% {
         width: 143.67px;
     }
+
     100% {
         width: 143.67px;
     }
@@ -542,20 +593,20 @@ body{
 
 
 /* Documents: zona de drag and drop*/
-
-.form__documents{
+.form__documents,
+.form__mycase {
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
     margin: 2rem;
 }
 
-
-.layout__dragdrop{
-    border:2px dashed var(--color--primary);
+.layout__dragdrop {
+    border: 2px dashed var(--color--primary);
     border-radius: 15px;
-    height: 190px; /*350*/
+    height: 190px;
+    /*350*/
     width: 700px;
     border-radius: 6px;
     display: flex;
@@ -566,11 +617,11 @@ body{
     margin-bottom: 3rem;
 }
 
-.layout__dragdrop.active{
+.layout__dragdrop.active {
     border: 2px solid var(--color--primary);
 }
 
-.dragdrop__icon-container{
+.dragdrop__icon-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -579,17 +630,17 @@ body{
     flex-direction: column;
 }
 
-.dragdrop__icon{
+.dragdrop__icon {
     font-size: 90px;
     color: var(--color--primary);
 }
 
-.dragdrop__text{
+.dragdrop__text {
     font-size: 1.7rem;
     font-weight: 500;
 }
 
-.dragdrop__text--o{
+.dragdrop__text--o {
     font-size: 1.4rem;
     font-weight: 500;
     color: var(--color--primary);
@@ -597,7 +648,7 @@ body{
 }
 
 .dragdrop__text--button,
-.form__button{
+.form__button {
     margin-top: 1rem;
     padding: 10px 25px;
     border-radius: 15px;
@@ -611,13 +662,13 @@ body{
     opacity: 0.8;
 }
 
-.form__button{
+.form__button {
     font-size: 1rem;
     border: none;
 }
 
-/* Estilos de la sección de documentos subidos. */
-.layout__uploadDocuments{
+/* Estilos de la sección de documentos y mycase.html */
+.layout__uploadDocuments {
     max-width: 700px;
     background-color: var(--color--primary);
     padding: 20px 30px;
@@ -626,13 +677,25 @@ body{
 }
 
 .uploadDocuments__title,
-.documents__title {
+.documents__title,
+.mycase__title,
+.accounting__title,
+.cases__title,
+.user-management__title {
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--grad-clr2);
 }
 
-.documents__input{
+.accounting__title,
+.cases__title,
+.user-management__title {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.documents__input,
+.mycase__input {
     width: 50%;
     padding: 12px 8px;
     background-color: #f3f3f3;
@@ -641,24 +704,28 @@ body{
     margin: 1rem;
 }
 
-.uploadDocuments__showfilebox{
+.mycase__input {
+    width: 200px;
+}
+
+.uploadDocuments__showfilebox {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 10px 0;
     padding: 10px 15px;
     box-shadow: #0000000d 0px 0px 0px 1px,
-    #d1d5db3d 0px 0px 0px 1px inset;
+        #d1d5db3d 0px 0px 0px 1px inset;
 }
 
-.uploadDocuments__left{
+.uploadDocuments__left {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.filetype{
+.filetype {
     background-color: var(--grad-clr1);
     color: var(--color--primary);
     padding: 3px 10px;
@@ -667,13 +734,236 @@ body{
     text-transform: uppercase;
 }
 
-.uploadDocuments__left h3{
+.uploadDocuments__left h3 {
     font-weight: 600;
     font-size: 1rem;
 }
 
-.uploadDocuments__icon {
+.uploadDocuments__icon,
+.user-management__icon,
+.clientfile__icon {
     color: var(--grad-clr1);
     font-size: 17px;
     cursor: pointer;
+}
+
+/* Estilos de la timeline que muestra lso estados en el que se encuentran los casos. */
+.mycase__states {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.states__state {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.skills__progressbar {
+    /*width: 100%; No es necesario si no se pone display: inline-block;*/
+    height: 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 1rem;
+    background-color: var(--color-principal);
+    margin-bottom: 1.5rem;
+}
+
+.skills__percentage {
+    width: 40%;
+    height: 0.9rem;
+    background-color: var(--grad-clr1);
+    border: 2px solid var(--color-principal);
+    border-radius: 1rem;
+}
+
+/*Modificadores de procentaje para el nivel de la progressbar.*/
+.skills__percentage--p1 {
+    width: 10%;
+}
+
+.skills__percentage--p2 {
+    width: 20%;
+}
+
+.skills__percentage--p3 {
+    width: 30%;
+}
+
+.skills__percentage--p4 {
+    width: 40%;
+}
+
+.skills__percentage--p5 {
+    width: 50%;
+}
+
+.skills__percentage--p6 {
+    width: 60%;
+}
+
+.skills__percentage--p7 {
+    width: 70%;
+}
+
+.skills__percentage--p8 {
+    width: 80%;
+}
+
+.skills__percentage--p9 {
+    width: 90%;
+}
+
+.skills__percentage--p10 {
+    width: 100%;
+}
+
+/* Contabilidad */
+
+.accounting__table,
+.cases__table,
+.user-management__table {
+    border-collapse: collapse;
+    margin: 25px 70px;
+    font-size: 1em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 15%);
+}
+
+.cases__table--documentation {
+    width: 60%;
+}
+
+.accounting__table thead tr,
+.cases__table thead tr,
+.user-management__table thead tr {
+    background-color: var(--grad-clr1);
+    color: var(--color--primary);
+    text-align: left;
+    font-weight: bold;
+}
+
+.accounting__table th,
+.accounting__table td,
+.cases__table th,
+.cases__table td,
+.user-management__table th,
+.user-management__table td {
+    padding: 12px 15px;
+}
+
+.accounting__table tbody tr,
+.cases__table tbody tr,
+.user-management__table tboody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.accounting__table tbody tr:nth-of-type(even),
+.cases__table tbody tr:nth-of-type(even),
+.user-management__table tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+/* Iconos para eliminar filas en user__management. */
+.user-management__iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ficha de cliente. */
+
+.clientfile__container {
+    display: grid;
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+        'title title'
+        'info notes';
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 15% 90%;
+    gap: 10px;
+    height: 70vh;
+    min-height: 500px;
+    min-width: 1200px;
+    background-color: var(--color--primary);
+    margin-top: 4rem;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 15%);
+    overflow: hidden;
+}
+
+.clientfile__title {
+    position: relative;
+    width: 100%;
+    grid-area: title;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.clientfile__username{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.clientfile__icon{
+    color: var(--color-text-);
+    font-size: 1.5rem;
+}
+
+.clientfile__title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    height: 1px;
+    background-color: var(--color-text);
+    transform: translateX(-50%); /* Ajusta el punto de inicio para centrar el borde */
+}
+
+.clientfile__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    grid-area: info;
+    padding-bottom: 2rem;
+}
+
+.clientfile__notes {
+    width: 100%;
+    grid-area: notes;
+    padding-bottom: 2rem;
+}
+
+.notes__notes-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 95%;
+    border-radius: 20px;
+    background-color: var(--bg-color);
+}
+
+.notes__note{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+
+.note__writter{
+    color: var(--color-secondary);
+    margin: 0.5rem;
 }

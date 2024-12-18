@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartera de Casos</title>
+    <link rel="icon" href="assets/img/logo-corpe-legal.png" />
+    <!-- Fuentes y estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/playfair-display/" />
+</head>
+
+<body>
+    <div class="layout">
+
+        <!-- Header con filtro -->
+        <section class="layout__header">
+            <!-- Navegador -->
+            <header class="menu__navbar">
+                <!-- Logo -->
+                <div class="navbar__logo">
+                    <a href="#" class="navbar__link-logo">
+                        <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light" />
+                    </a>
+                </div>
+
+                <!-- Navegación -->
+                <nav class="navbar__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="login.html" class="nav__title" target="_blank">Inicio</a>
+                        </li>
+                        <!-- Solo disponible para el administrador -->
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Administrar
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="register.html" class="submenu__title">Añadir usuario</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Eliminar usuario</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Casos
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="mycase.html" class="submenu__title">¿Cómo va mi caso?</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Modificar el estado de un caso</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Cartera de casos</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Estudio de viabilidad</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Expedientes</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="calendar.html" class="submenu__title">Calendario</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__title">Documentación
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="documents.html" class="submenu__title">Subir documentos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Contabilidad</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Enlaces externos
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Cálculo costas procesales</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Partido judicial</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Firmafy</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Legal Pigeon</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Corpe Legal</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="header__filter"></section>
+        </section>
+
+        <section class="layout__clientfile">
+            <article class="clientfile__container">
+                <section class="clientfile__title">
+                    <i class="clientfile__icon fa-solid fa-user"></i>
+                    <h2 class="clientfile__username">Grant Morrison</h2>
+                </section>
+                <section class="clientfile__info">
+                    <p>Correo: joan@gmail.com</p>
+                    <p>Correo: joan@gmail.com</p>
+                    <p>Correo: joan@gmail.com</p>
+                    <p>Correo: joan@gmail.com</p>
+                    <p>Correo: joan@gmail.com</p>
+                    <p>Correo: joan@gmail.com</p>
+                </section>
+                <section class="clientfile__notes">
+                    <div class="notes__notes-container">
+                        <div class="notes__note">
+                            <h3>Nota</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                            <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                        </div>
+
+                        <div class="notes__note">
+                            <h3>Nota</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                            <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </section>
+
+        <section class="layout__cases">
+
+            <h3 class="cases__title">Expedientes del cliente</h3>
+
+            <table class="cases__table">
+                <thead>
+                    <tr>
+                        <th>ID de expediente</th>
+                        <th>Cliente</th>
+                        <th>Reclamación previa</th>
+                        <th>Contestación reclamación</th>
+                        <th>Días transcurridos</th>
+                        <th>APUD ACTA</th>
+                        <th>Fecha audiencia previa</th>
+                        <th>Fecha juicio</th>
+                        <th>Documentación</th>
+                        <th>Sentencia</th>
+                        <th>Archivar caso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fila 1 Columna 1</td>
+                        <td>Fila 1 Columna 2</td>
+                        <td>Fila 1 Columna 3</td>
+                        <td>Fila 1 Columna 4</td>
+                        <td>Fila 1 Columna 5</td>
+                        <td>Fila 1 Columna 6</td>
+                        <td>Fila 1 Columna 1</td>
+                        <td>Fila 1 Columna 2</td>
+                        <td>Fila 1 Columna 3</td>
+                        <td>Fila 1 Columna 4</td>
+                        <td>Fila 1 Columna 4</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2 Columna 1</td>
+                        <td>Fila 2 Columna 2</td>
+                        <td>Fila 2 Columna 3</td>
+                        <td>Fila 2 Columna 4</td>
+                        <td>Fila 2 Columna 5</td>
+                        <td>Fila 2 Columna 6</td>
+                        <td>Fila 2 Columna 1</td>
+                        <td>Fila 2 Columna 2</td>
+                        <td>Fila 2 Columna 3</td>
+                        <td>Fila 2 Columna 4</td>
+                        <td>Fila 2 Columna 4</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3 Columna 1</td>
+                        <td>Fila 3 Columna 2</td>
+                        <td>Fila 3 Columna 3</td>
+                        <td>Fila 3 Columna 4</td>
+                        <td>Fila 3 Columna 5</td>
+                        <td>Fila 3 Columna 6</td>
+                        <td>Fila 3 Columna 1</td>
+                        <td>Fila 3 Columna 2</td>
+                        <td>Fila 3 Columna 3</td>
+                        <td>Fila 3 Columna 4</td>
+                        <td>Fila 3 Columna 4</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 4 Columna 1</td>
+                        <td>Fila 4 Columna 2</td>
+                        <td>Fila 4 Columna 3</td>
+                        <td>Fila 4 Columna 4</td>
+                        <td>Fila 4 Columna 5</td>
+                        <td>Fila 4 Columna 6</td>
+                        <td>Fila 4 Columna 1</td>
+                        <td>Fila 4 Columna 2</td>
+                        <td>Fila 4 Columna 3</td>
+                        <td>Fila 4 Columna 4</td>
+                        <td>Fila 4 Columna 4</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section class="layout__cases layout__cases--documentation">
+
+            <h3 class="cases__title">Documentación</h3>
+
+            <table class="cases__table cases__table--documentation">
+                <thead>
+                    <tr>
+                        <th>ID de expediente</th>
+                        <th>Documentación</th>
+                        <th>Descargar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fila 1 Columna 1</td>
+                        <td>Fila 1 Columna 2</td>
+                        <td>Fila 1 Columna 3</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 2 Columna 1</td>
+                        <td>Fila 2 Columna 2</td>
+                        <td>Fila 2 Columna 3</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3 Columna 1</td>
+                        <td>Fila 3 Columna 2</td>
+                        <td>Fila 3 Columna 3</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 4 Columna 1</td>
+                        <td>Fila 4 Columna 2</td>
+                        <td>Fila 4 Columna 3</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <!-- Footer que contiene ??? -->
+        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
+        </footer>
+    </div>
+    
+</body>
+
+</html>

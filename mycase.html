@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>¿Cómo va mi caso?</title>
     <link rel="icon" href="assets/img/logo-corpe-legal.png" />
     <!-- Fuentes y estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -122,14 +122,24 @@
 
             <!-- Entrada de ID. -->
             <form class="form__mycase" action="">
-                <h3 class="mycase__title">ID de su caso</h3>
-                <input type="number" class="mycase__input" placeholder="Introduzca el número de su caso" />
-                <button class="form__button">Enviar</button>
+                <h3 class="mycase__title">ID del caso</h3>
+                <input type="number" class="mycase__input" placeholder="Introduzca el ID de su caso" />
+                <button class="form__button">Ver estado de mi caso</button>
             </form>
 
-            <!-- Tabla con los datos sobre el cASO.-->
-            <section class="mycase__table-container">
-                <table></table>
+            <!-- Estado del caso.-->
+            <section class="mycase__progressbar">
+
+                <div class="mycase__states">
+                    <div class="states__state">Estado</div>
+                    <div class="states__state">Estado</div>
+                    <div class="states__state">Estado</div>
+                </div>
+
+                <div class="skills__progressbar">
+                    <div class="skills__percentage skills__percentage--p9"></div>
+                </div>
+                
             </section>
 
         </section>
