@@ -1,10 +1,15 @@
 package domain.model;
 
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
+@Getter
+@Setter
 public class Formulario {
     private String telefono;
     private String nombre_apellidos;

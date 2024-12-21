@@ -1,24 +1,25 @@
 package jakarta.security;
 
-import domain.servicios.ServicesLogin;
+import common.Cons;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import jakarta.security.enterprise.credential.BasicAuthenticationCredential;
 import jakarta.security.enterprise.credential.Credential;
+import jakarta.security.enterprise.credential.RememberMeCredential;
 import jakarta.security.enterprise.identitystore.CredentialValidationResult;
 import jakarta.security.enterprise.identitystore.IdentityStore;
-import modelo.Login;
 
 import java.util.Set;
 
 
 @Singleton
-public class BDIdentityStore implements IdentityStore {
-
-    private final ServicesLogin servicesLogin;
+public class BearerIdentityStore implements IdentityStore {
+    /*
+    private final ServiciosLogin servicesLogin;
 
     @Inject
-    public BDIdentityStore(ServicesLogin servicesLogin) {
+    public BearerIdentityStore(ServiciosLogin servicesLogin) {
         this.servicesLogin = servicesLogin;
     }
 
@@ -26,19 +27,17 @@ public class BDIdentityStore implements IdentityStore {
     @Override
     public CredentialValidationResult validate(Credential credential) {
         CredentialValidationResult result = CredentialValidationResult.INVALID_RESULT;
-        BasicAuthenticationCredential user = (BasicAuthenticationCredential) credential;
-        Login username = null;
+        RememberMeCredential user = (RememberMeCredential) credential;
         try {
-            username = servicesLogin.login(user.getCaller(), String.valueOf(user.getPassword().getValue()));
+            Claims claims = servicesLogin.validateToken(user.getToken());
+            result = new CredentialValidationResult(claims.get(Cons.USER).toString(), Set.of(claims.get(Cons.ROLES).toString()));
+        } catch (ExpiredJwtException e) {
+            throw e;
         } catch (Exception e) {
             return CredentialValidationResult.NOT_VALIDATED_RESULT;
-        }
-
-        if (username != null) {
-            result = new CredentialValidationResult(username.getUser(), Set.of(username.getRol()));
         }
         return result;
 
     }
-
+*/
 }
