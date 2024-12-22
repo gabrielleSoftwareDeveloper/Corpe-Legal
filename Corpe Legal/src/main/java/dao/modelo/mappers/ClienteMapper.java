@@ -6,7 +6,7 @@ import jakarta.inject.Inject;
 
 
 public class ClienteMapper {
-
+/*
     @Inject
     public ClienteMapper() {
 
@@ -21,7 +21,7 @@ public class ClienteMapper {
         return new Cliente(clienteEntity.getTelefono(), clienteEntity.getNombre_apellidos(),
                 clienteEntity.getEmail(), clienteEntity.getDNI(), clienteEntity.getDireccion(),
                 clienteEntity.getLocalidad(), clienteEntity.getFotoDNI());
-    }
+    }*/
 }
 
 

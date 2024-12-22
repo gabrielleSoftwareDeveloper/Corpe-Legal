@@ -8,7 +8,7 @@ import jakarta.inject.Inject;
 
 public class UsuarioMapper {
 
-
+/*
     private final CasoMapper casoMapper;
 
     @Inject
@@ -26,5 +26,5 @@ public class UsuarioMapper {
         return new Usuario(usuarioEntity.getId(), usuarioEntity.getNombre_apellidos(),
                 Permiso.valueOf(usuarioEntity.getRol()), usuarioEntity.getCasos()
                 .stream().map(casoMapper::toCaso).toList());
-    }
+    }*/
 }

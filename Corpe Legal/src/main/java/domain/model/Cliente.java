@@ -22,4 +22,9 @@ public class Cliente {
 
     @Lob
     private byte[]  fotoDNI;
+
+
+    public Cliente(String email) {
+        this.email = email;
+    }
 }

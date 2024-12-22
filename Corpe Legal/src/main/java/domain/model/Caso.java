@@ -10,11 +10,9 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
-@Data
+
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
 public class Caso {
     private int id;
     private int expediente;
@@ -58,5 +56,14 @@ public class Caso {
             this.fecha_espera = fecha_reclamacion.plusDays(31);
             this.dias_espera = ChronoUnit.DAYS.between(fecha_reclamacion, this.fecha_espera);
         }
+    }
+
+    public Caso(int id, Cliente cliente) {
+        this.id = id;
+        this.cliente = cliente;
+    }
+
+    public int getId() {
+        return id;
     }
 }

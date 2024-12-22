@@ -10,7 +10,7 @@ import jakarta.inject.Inject;
 
 // Java
 public class CasoMapper {
-    private final ClienteMapper clienteMapper;
+ /*   private final ClienteMapper clienteMapper;
 
     @Inject
     public CasoMapper(ClienteMapper clienteMapper) {
@@ -97,7 +97,7 @@ public class CasoMapper {
             caso.setFechaReclamacion(casoEntity.getFecha_reclamacion());
         }
         return caso;
-    }
+    }*/
 }
 
 

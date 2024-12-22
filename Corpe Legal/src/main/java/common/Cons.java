@@ -51,5 +51,5 @@ public class Cons {
     public static final String EL_USUARIO_NO_ESTA_ACTIVADO = "El usuario no está activado";
     public static final String SELECT_L_HORA_FROM_LOGIN_ENTITY_L_WHERE_L_CODIGO_CODIGO = "select l.hora from LoginEntity l where l.codigo = :codigo";
     public static final String UPDATE_LOGIN_ENTITY_L_SET_L_ACTIVATED_TRUE_WHERE_L_CODIGO_CODIGO = "update LoginEntity l set l.activated = true where l.codigo = :codigo";
-    public static final String UNIT_3_HIBERNATE = "unit3.";
+    public static final String UNIT_3_HIBERNATE = "unit3";
 }
