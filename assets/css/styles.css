@@ -28,6 +28,10 @@ body {
     background-color: var(--bg-color);
 }
 
+th, td{
+    text-align: center;
+}
+
 .layout,
 .layout__accounting,
 .layout__cases,
@@ -72,6 +76,10 @@ body {
 .layout__cases,
 .layout__user-management {
     margin: 4rem;
+}
+
+.layout__cases{
+    margin-bottom: 2rem;
 }
 
 .layout__cases--documentation {
@@ -266,49 +274,62 @@ body {
 }
 
 /* Secciones de los estados */
+.states__pendiente,
+.states__archivado,
+.states__en-proceso,
+.states__estudio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-.states__pendiente {
-    width: 80%;
+.states__pendiente,
+.states__en-proceso,
+.states__estudio {
+    width: 100%;
     border-right: 1px solid var(--color-bg-user-cards);
     padding: 2rem;
     border-radius: 15px;
 }
 
-/* Opciones */
-#pendiente {
-    color: var(--color-text);
-}
-
-#en-curso {
-    color: var(--color-text);
-}
-
-#reserva {
-    color: var(--color-text);
-}
-
-.states__en-curso,
-.states__reservado {
-    width: 80%;
-    border-right: 1px solid var(--color-bg-user-cards);
+.states__archivado {
+    width: 95%;
     padding: 2rem;
     border-radius: 15px;
-
-}
-
-.states__prearchivo {
-    width: 50%;
-    padding: 2rem;
-    border-radius: 15px;
-
 }
 
 /* Tarjetas de usuario */
+.states__title{
+    color: var(--grad-clr1);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 .states__card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: var(--color--primary);
-    padding: 7rem 5rem;
+    padding: 1rem;
     margin-top: 1rem;
     border-radius: 15px;
+}
+
+.card__header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.users__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 
@@ -695,13 +716,18 @@ body {
 }
 
 .documents__input,
-.mycase__input {
+.mycase__input,
+.users__options {
     width: 50%;
     padding: 12px 8px;
     background-color: #f3f3f3;
     border: none;
     outline: none;
     margin: 1rem;
+}
+
+.users__options{
+    margin: 0;
 }
 
 .mycase__input {
@@ -877,17 +903,17 @@ body {
 
 .clientfile__container {
     display: grid;
-    width: 80%;
+    width: 85%;
+    height: 525px;
+    min-height: 525px;
+    min-width: 1200px;
     display: grid;
     grid-template-areas:
         'title title'
         'info notes';
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 45% 55%;
     grid-template-rows: 15% 90%;
     gap: 10px;
-    height: 70vh;
-    min-height: 500px;
-    min-width: 1200px;
     background-color: var(--color--primary);
     margin-top: 4rem;
     border-radius: 50px;
@@ -906,10 +932,16 @@ body {
     padding: 1rem;
 }
 
-.clientfile__username{
+.clientfile__username,
+.card__username{
     font-size: 1.2rem;
     font-weight: 700;
     padding-left: 10px;
+    color: var(--grad-clr1);
+}
+
+.card__username{
+    font-size: 0.9rem;
 }
 
 .clientfile__icon{
@@ -924,21 +956,24 @@ body {
     left: 50%;
     width: 90%;
     height: 1px;
-    background-color: var(--color-text);
+    background-color: var(--grad-clr1);
     transform: translateX(-50%); /* Ajusta el punto de inicio para centrar el borde */
 }
 
 .clientfile__info {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-direction: row;
     width: 100%;
     grid-area: info;
-    padding-bottom: 2rem;
+    gap: 3rem;
+    padding: 1rem;
 }
 
 .clientfile__notes {
+    display: flex;
+    justify-content: center;
     width: 100%;
     grid-area: notes;
     padding-bottom: 2rem;
@@ -961,9 +996,40 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 0 1rem;
+    border-bottom: 1px solid var(--color--primary);
+    
+}
+
+.note__title{
+    font-weight: 700;
+    margin-top: 0.7rem;
+}
+
+.note__text{
+    margin: 0.5rem;
 }
 
 .note__writter{
-    color: var(--color-secondary);
-    margin: 0.5rem;
+    color: var(--grad-clr2);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.info__left,
+.info__right{
+    display: flex;
+    justify-content:center;
+    align-items:space-around;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info__title{
+    font-weight: 700;
+}
+
+.info__text{
+    background-color: #f3f3f3;
+    padding: 4px;
+    border-radius: 7px;
 }

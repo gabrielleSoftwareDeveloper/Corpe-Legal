@@ -26,16 +26,30 @@
             <header class="menu__navbar">
                 <!-- Logo -->
                 <div class="navbar__logo">
-                    <a href="#" class="navbar__link-logo">
-                        <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light"/>
+                    <a href="https://www.corpelegal.com/" class="navbar__link-logo">
+                        <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light" />
                     </a>
                 </div>
 
                 <!-- Navegación -->
-                 <nav class="navbar__nav">
+                <nav class="navbar__nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Inicio</a>
+                            <a href="login.html" class="nav__title" target="_blank">Inicio</a>
+                        </li>
+                        <!-- Solo disponible para el administrador -->
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Administrar
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="register.html" class="submenu__title">Añadir usuario</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="user_management.html" class="submenu__title">Eliminar usuario</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__title">Casos
@@ -43,13 +57,19 @@
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Apoderamiento</a>
+                                    <a href="mycase.html" class="submenu__title">¿Cómo va mi caso?</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Cálculos procesales</a>
+                                    <a href="#" class="submenu__title">Modificar el estado de un caso</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                    <a href="cases.html" class="submenu__title">Cartera de casos</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Estudio de viabilidad</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="calendar.html" class="submenu__title">Calendario</a>
                                 </li>
                             </ul>
                         </li>
@@ -59,116 +79,315 @@
                             </a>
                             <ul class="nav__submenu">
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Representado</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Peritaje</a>
+                                    <a href="documents.html" class="submenu__title">Subir documentos</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Inicio</a>
+                            <a href="accounting.html" class="nav__title">Contabilidad</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Inicio</a>
+                            <a href="#" class="nav__title">Enlaces externos
+                                <i class="fa-solid fa-chevron-down nav__icon"></i>
+                            </a>
+                            <ul class="nav__submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">APUD ACTA</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Cálculo costas procesales</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Partido judicial</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Firmafy</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__title">Legal Pigeon</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a href="https://www.corpelegal.com/" class="nav__title">Corpe Legal</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__title">Cerrar sesión</a>
                         </li>
                     </ul>
-                 </nav>
-           </header> 
+                </nav>
+            </header>
 
-           <section class="header__filter"></section>
-           
+            <section class="header__filter"></section>
         </section>
-
 
         <!-- Notificaciones de usuarios dependiendo de su estado (pendiente, en curso, reservado) -->
         <div class="layout__states">
 
             <section class="states__pendiente">
 
-                <div class="states__users">
-                    <div class="users__list">
-                        <label class="users__user" for="pendiente" id="pendiente">Usuarios pendientes</label>
+                <h3 class="states__title">PENDIENTE</h3>
+
+                <article class="states__card">
+
+                    <div class="card__header">
                         <select class="users__options" name="pendiente" id="pendiente">
                             <!-- Las opciones provienen de la BBDD -->
                             <option disabled selected value="" class="options__option">Escoge una opción
                             </option>
                         </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
                     </div>
-                </div>
 
-                <article class="states__card pendiente__card"></article>
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
 
             </section>
 
-            <section class="states__en-curso">
+            <section class="states__estudio">
 
-                <div class="states__users">
-                    <div class="states__users">
-                        <div class="users__list">
-                            <label class="users__user" for="pendiente" id="en-curso">Usuarios en curso</label>
-                            <select class="users__options" name="pendiente" id="pendiente">
-                                <!-- Las opciones provienen de la BBDD -->
-                                <option disabled selected value="" class="options__option options-option-en-curso">
-                                    Escoge una opción
-                                </option>
-                            </select>
-                        </div>
+                <h3 class="states__title">ESTUDIO</h3>
+
+                <article class="states__card">
+                    <div class="card__header">
+                        <i class="user-management__icon fa-solid fa-arrow-left"></i>
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Juan José Cavas
+                            </option>
+                        </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
                     </div>
 
-                    <article class="states__card en-curso__card"></article>
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
 
             </section>
 
-            <section class="states__reservado">
+            <section class="states__en-proceso">
 
-                <div class="states__users">
-                    <div class="states__users">
-                        <div class="users__list">
-                            <label class="users__user" for="pendiente" id="en-curso">Usuarios en reserva</label>
-                            <select class="users__options" name="pendiente" id="reserva">
-                                <!-- Las opciones provienen de la BBDD -->
-                                <option disabled selected value="" class="options__option options-option-en-curso">
-                                    Escoge una opción
-                                </option>
-                            </select>
-                        </div>
+                <h3 class="states__title">EN PROCESO</h3>
+
+                <article class="states__card">
+                    <div class="card__header">
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Escoge una opción
+                            </option>
+                        </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
                     </div>
 
-                <article class="states__card reservado__card"></article>
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
             </section>
 
-            <section class="states__prearchivo">
+            <section class="states__archivado">
 
-                <div class="states__users">
-                    <div class="states__users">
-                        <div class="users__list">
-                            <label class="users__user" for="pendiente" id="en-curso">Prearchivo</label>
-                            <select class="users__options" name="pendiente" id="reserva">
-                                <!-- Las opciones provienen de la BBDD -->
-                                <option disabled selected value="" class="options__option options-option-en-curso">
-                                    Escoge una opción
-                                </option>
-                            </select>
+                <h3 class="states__title">ARCHIVADO</h3>
+
+                <article class="states__card">
+                    <select class="users__options" name="pendiente" id="reserva">
+                        <!-- Las opciones provienen de la BBDD -->
+                        <option disabled selected value="" class="options__option options-option-en-curso">
+                            Escoge una opción
+                        </option>
+                    </select>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
                         </div>
-                    </div>
+                    </section>
 
-                <article class="states__card reservado__card"></article>
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
             </section>
 
 
         </div>
-
-        <!-- Footer que contiene ??? -->
-        <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4rem; padding: 4rem;">
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043" style="border-radius: 20px;" width="60%" height="600" frameborder="0" scrolling="no"></iframe>
-            
-            <a style="cursor: pointer;" href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20241031/20241031&text=Reunión&details=Revisión+de+proyecto&location=Oficina" target="_blank">
-            <button class="overlay-panel__button">
-                Añadir Evento
-            </button></a>
-
-        </footer>
 
     </div>
 </body>

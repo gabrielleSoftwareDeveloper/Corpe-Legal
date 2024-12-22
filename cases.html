@@ -22,7 +22,7 @@
             <header class="menu__navbar">
                 <!-- Logo -->
                 <div class="navbar__logo">
-                    <a href="#" class="navbar__link-logo">
+                    <a href="https://www.corpelegal.com/" class="navbar__link-logo">
                         <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light" />
                     </a>
                 </div>
@@ -43,7 +43,7 @@
                                     <a href="register.html" class="submenu__title">Añadir usuario</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Eliminar usuario</a>
+                                    <a href="user_management.html" class="submenu__title">Eliminar usuario</a>
                                 </li>
                             </ul>
                         </li>
@@ -59,13 +59,10 @@
                                     <a href="#" class="submenu__title">Modificar el estado de un caso</a>
                                 </li>
                                 <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Cartera de casos</a>
+                                    <a href="cases.html" class="submenu__title">Cartera de casos</a>
                                 </li>
                                 <li class="submenu__item">
                                     <a href="#" class="submenu__title">Estudio de viabilidad</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Expedientes</a>
                                 </li>
                                 <li class="submenu__item">
                                     <a href="calendar.html" class="submenu__title">Calendario</a>
@@ -73,7 +70,7 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__title">Documentación
+                            <a href="#" class="nav__title">Documentación
                                 <i class="fa-solid fa-chevron-down nav__icon"></i>
                             </a>
                             <ul class="nav__submenu">
@@ -83,7 +80,7 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Contabilidad</a>
+                            <a href="accounting.html" class="nav__title">Contabilidad</a>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__title">Enlaces externos
@@ -108,7 +105,7 @@
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__title">Corpe Legal</a>
+                            <a href="https://www.corpelegal.com/" class="nav__title">Corpe Legal</a>
                         </li>
                         <li class="nav__item">
                             <a href="#" class="nav__title">Cerrar sesión</a>
@@ -118,7 +115,6 @@
             </header>
 
             <section class="header__filter"></section>
-
         </section>
 
         <section class="layout__cases">
@@ -197,13 +193,34 @@
                 </tbody>
             </table>
 
+            <script>
+                // URL base de la API
+                const baseUrl = "http://192.168.1.1:8080/Corpe_Legal-1.0-SNAPSHOT/api/usuario/1";
+
+                // Llamada GET
+                fetch(baseUrl)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Error en la solicitud: ${response.statusText}`);
+                        }
+                        return response.json(); // O `response.text()` si el contenido no es JSON
+                    })
+                    .then(data => {
+                        console.log("Datos obtenidos:", data);
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+
+            </script>
+
         </section>
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">
         </footer>
     </div>
-    
+
 </body>
 
 </html>
