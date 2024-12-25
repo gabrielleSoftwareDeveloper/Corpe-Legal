@@ -10,191 +10,110 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
     <link rel="stylesheet" href="assets/fonts/playfair-display/" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- Carga JS -->
+    <script src="assets/js/including-menu.js"></script>
+    <script src="assets/js/menu-mobile.js"></script>
+    <script src="assets/js/navbar-fixed.js"></script>
 </head>
 
 <body>
+    <!-- Menú navegación responsive -->
+    <div class="menu-mobile">
+    </div>
+
+    <!-- Layout principal -->
     <div class="layout">
-
-        <!-- Header con filtro -->
+        <!-- Header con navegador -->
         <section class="layout__header">
-            <!-- Navegador -->
-            <header class="menu__navbar">
-                <!-- Logo -->
-                <div class="navbar__logo">
-                    <a href="https://www.corpelegal.com/" class="navbar__link-logo">
-                        <img src="./assets/img/logo-corpe-legal.png" class="navbar__logo-light" />
-                    </a>
-                </div>
-
-                <!-- Navegación -->
-                <nav class="navbar__nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="login.html" class="nav__title" target="_blank">Inicio</a>
-                        </li>
-                        <!-- Solo disponible para el administrador -->
-                        <li class="nav__item">
-                            <a href="#" class="nav__title">Administrar
-                                <i class="fa-solid fa-chevron-down nav__icon"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="register.html" class="submenu__title">Añadir usuario</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="user_management.html" class="submenu__title">Eliminar usuario</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__title">Casos
-                                <i class="fa-solid fa-chevron-down nav__icon"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="mycase.html" class="submenu__title">¿Cómo va mi caso?</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Modificar el estado de un caso</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="cases.html" class="submenu__title">Cartera de casos</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Estudio de viabilidad</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="calendar.html" class="submenu__title">Calendario</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__title">Documentación
-                                <i class="fa-solid fa-chevron-down nav__icon"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="documents.html" class="submenu__title">Subir documentos</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="accounting.html" class="nav__title">Contabilidad</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__title">Enlaces externos
-                                <i class="fa-solid fa-chevron-down nav__icon"></i>
-                            </a>
-                            <ul class="nav__submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">APUD ACTA</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Cálculo costas procesales</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Partido judicial</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Firmafy</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__title">Legal Pigeon</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav__item">
-                            <a href="https://www.corpelegal.com/" class="nav__title">Corpe Legal</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__title">Cerrar sesión</a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-
-            <section class="header__filter"></section>
         </section>
 
         <section class="layout__user-management">
 
             <h3 class="user-management__title">Gestión de usuarios</h3>
 
-            <table class="user-management__table">
-                <thead>
-                    <tr>
-                        <th>ID de expediente</th>
-                        <th>Cliente</th>
-                        <th>Reclamación previa</th>
-                        <th>Contestación reclamación</th>
-                        <th>Días transcurridos</th>
-                        <th>APUD ACTA</th>
-                        <th>Fecha audiencia previa</th>
-                        <th>Fecha juicio</th>
-                        <th>Documentación</th>
-                        <th>Sentencia</th>
-                        <th>Archivar caso</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fila 1 Columna 1</td>
-                        <td>Fila 1 Columna 2</td>
-                        <td>Fila 1 Columna 3</td>
-                        <td>Fila 1 Columna 4</td>
-                        <td>Fila 1 Columna 5</td>
-                        <td>Fila 1 Columna 6</td>
-                        <td>Fila 1 Columna 1</td>
-                        <td>Fila 1 Columna 2</td>
-                        <td>Fila 1 Columna 3</td>
-                        <td>Fila 1 Columna 4</td>
-                        <td class="user-management__iconContainer"><i class="user-management__icon fa-solid fa-x"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fila 2 Columna 1</td>
-                        <td>Fila 2 Columna 2</td>
-                        <td>Fila 2 Columna 3</td>
-                        <td>Fila 2 Columna 4</td>
-                        <td>Fila 2 Columna 5</td>
-                        <td>Fila 2 Columna 6</td>
-                        <td>Fila 2 Columna 1</td>
-                        <td>Fila 2 Columna 2</td>
-                        <td>Fila 2 Columna 3</td>
-                        <td>Fila 2 Columna 4</td>
-                        <td class="user-management__iconContainer"><i class="user-management__icon fa-solid fa-x"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fila 3 Columna 1</td>
-                        <td>Fila 3 Columna 2</td>
-                        <td>Fila 3 Columna 3</td>
-                        <td>Fila 3 Columna 4</td>
-                        <td>Fila 3 Columna 5</td>
-                        <td>Fila 3 Columna 6</td>
-                        <td>Fila 3 Columna 1</td>
-                        <td>Fila 3 Columna 2</td>
-                        <td>Fila 3 Columna 3</td>
-                        <td>Fila 3 Columna 4</td>
-                        <td class="user-management__iconContainer"><i class="user-management__icon fa-solid fa-x"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fila 4 Columna 1</td>
-                        <td>Fila 4 Columna 2</td>
-                        <td>Fila 4 Columna 3</td>
-                        <td>Fila 4 Columna 4</td>
-                        <td>Fila 4 Columna 5</td>
-                        <td>Fila 4 Columna 6</td>
-                        <td>Fila 4 Columna 1</td>
-                        <td>Fila 4 Columna 2</td>
-                        <td>Fila 4 Columna 3</td>
-                        <td>Fila 4 Columna 4</td>
-                        <td class="user-management__iconContainer"><i class="user-management__icon fa-solid fa-x"></i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="responsive__table">
+                <table class="user-management__table">
+                    <thead>
+                        <tr>
+                            <th>ID de expediente</th>
+                            <th>Cliente</th>
+                            <th>Reclamación previa</th>
+                            <th>Contestación reclamación</th>
+                            <th>Días transcurridos</th>
+                            <th>APUD ACTA</th>
+                            <th>Fecha audiencia previa</th>
+                            <th>Fecha juicio</th>
+                            <th>Documentación</th>
+                            <th>Sentencia</th>
+                            <th>Archivar caso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fila 1 Columna 1</td>
+                            <td>Fila 1 Columna 2</td>
+                            <td>Fila 1 Columna 3</td>
+                            <td>Fila 1 Columna 4</td>
+                            <td>Fila 1 Columna 5</td>
+                            <td>Fila 1 Columna 6</td>
+                            <td>Fila 1 Columna 1</td>
+                            <td>Fila 1 Columna 2</td>
+                            <td>Fila 1 Columna 3</td>
+                            <td>Fila 1 Columna 4</td>
+                            <td class="user-management__iconContainer"><i
+                                    class="user-management__icon fa-solid fa-x"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fila 2 Columna 1</td>
+                            <td>Fila 2 Columna 2</td>
+                            <td>Fila 2 Columna 3</td>
+                            <td>Fila 2 Columna 4</td>
+                            <td>Fila 2 Columna 5</td>
+                            <td>Fila 2 Columna 6</td>
+                            <td>Fila 2 Columna 1</td>
+                            <td>Fila 2 Columna 2</td>
+                            <td>Fila 2 Columna 3</td>
+                            <td>Fila 2 Columna 4</td>
+                            <td class="user-management__iconContainer"><i
+                                    class="user-management__icon fa-solid fa-x"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fila 3 Columna 1</td>
+                            <td>Fila 3 Columna 2</td>
+                            <td>Fila 3 Columna 3</td>
+                            <td>Fila 3 Columna 4</td>
+                            <td>Fila 3 Columna 5</td>
+                            <td>Fila 3 Columna 6</td>
+                            <td>Fila 3 Columna 1</td>
+                            <td>Fila 3 Columna 2</td>
+                            <td>Fila 3 Columna 3</td>
+                            <td>Fila 3 Columna 4</td>
+                            <td class="user-management__iconContainer"><i
+                                    class="user-management__icon fa-solid fa-x"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Fila 4 Columna 1</td>
+                            <td>Fila 4 Columna 2</td>
+                            <td>Fila 4 Columna 3</td>
+                            <td>Fila 4 Columna 4</td>
+                            <td>Fila 4 Columna 5</td>
+                            <td>Fila 4 Columna 6</td>
+                            <td>Fila 4 Columna 1</td>
+                            <td>Fila 4 Columna 2</td>
+                            <td>Fila 4 Columna 3</td>
+                            <td>Fila 4 Columna 4</td>
+                            <td class="user-management__iconContainer"><i
+                                    class="user-management__icon fa-solid fa-x"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </section>
 

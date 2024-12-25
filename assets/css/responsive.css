@@ -1,0 +1,248 @@
+:root {
+    --color--primary: #ffffff;
+    --color-secondary: rgb(49, 122, 93);
+    --color-text: #1c1b1b;
+    --color-bg-user-cards: #dfdbdb;
+    --linear-grad: linear-gradient(to right, #14302f, #245552);
+    --grad-clr1: #142c30;
+    --grad-clr2: #243B55;
+    --bg-color: #ebebeb;
+    --color-text-description: #99A1AA;
+    --color-hover-dark: #303035;
+    --color-borders: #E3E6E9;
+    --color-text-body: #525260;
+}
+
+@media (max-width: 1600px) {
+
+    /* Número de estados disponibles horizontalmente - CRM */
+    .layout__states {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 1437px) {
+
+    /* Menú de navegación */
+    .navbar__nav {
+        display: none;
+    }
+
+    .navbar__mobile-btn {
+        display: block;
+    }
+
+}
+
+@media (max-width: 1400px) {
+
+    /* Número de estados disponibles horizontalmente - CRM */
+    .layout__states {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1300px) {
+    /* Ficha de cliente. */
+
+    .clientfile__container {
+        width: 85%;
+        height: 100%;
+        min-height: 1000px;
+        min-width: 600px;
+        display: grid;
+        grid-template-areas:
+            'title'
+            'info'
+            'notes';
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 40% 50%;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        width: 100%;
+        max-width: 900px;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .accounting__table,
+    .cases__table,
+    .user-management__table {
+        margin: 25px 10px;
+    }
+
+    thead th {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+    }
+
+    tbody td:nth-child(1) {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+    }
+
+    tbody td:nth-child(2) {
+        position: sticky;
+        left: 5.5rem;
+        z-index: 2;
+    }
+
+    tbody tr:nth-child(odd) td:nth-child(1),
+    tbody tr:nth-child(odd) td:nth-child(2) {
+        background-color: var(--bg-color);
+    }
+
+    tbody tr:nth-child(even) td:nth-child(1),
+    tbody tr:nth-child(even) td:nth-child(2) {
+        background-color: #f3f3f3;
+    }
+
+    thead th:nth-child(1),
+    thead th:nth-child(2) {
+        position: sticky;
+        left: 0;
+        z-index: 4;
+        background-color: var(--grad-clr1);
+    }
+
+    thead th:nth-child(2) {
+        left: 5.5rem;
+    }
+
+    /* Número de estados disponibles horizontalmente - CRM */
+    .layout__states {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 1000px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 800px;
+    }
+
+    /* Documentación */
+    .layout__dragdrop {
+        width: 500px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 700px;
+    }
+
+    /* CRM */
+    .layout__states {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .clientfile__container {
+        width: 85%;
+        min-width: 450px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 600px;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 500px;
+    }
+
+        /* Documentación */
+        .layout__dragdrop {
+            width: 300px;
+        }
+
+}
+
+@media (max-width: 570px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 400px;
+    }
+
+    /* CRM */
+    .clientfile__container {
+        width: 85%;
+        min-width: 400px;
+    }
+}
+
+
+@media (max-width: 512px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 350px;
+    }
+
+    /* Menú lateral versión móvil */
+    .menu-mobile {
+        width: 20rem;
+    }
+
+}
+
+@media (max-width: 423px) {
+
+    /* Tabla responsive */
+    .responsive__table {
+        max-width: 300px;
+    }
+
+    /* Menú lateral versión móvil */
+    .menu-mobile {
+        width: 17rem;
+    }
+
+    .clientfile__container {
+        width: 85%;
+        min-width: 300px;
+    }
+
+    /* CRM */
+    .info__modify-button {
+        position: fixed;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        z-index: 4;
+    }
+
+        /* Documentación */
+        .layout__dragdrop {
+            width: 300px;
+        }
+
+        .layout__uploadDocuments{
+            width: 300px;
+        }
+
+        .uploadDocuments__left{
+            overflow: hidden;
+        }
+
+}
