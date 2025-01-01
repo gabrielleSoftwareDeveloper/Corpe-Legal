@@ -47,6 +47,7 @@
                             <th>Fecha juicio</th>
                             <th>Documentación</th>
                             <th>Sentencia</th>
+                            <th>Modificar</th>
                             <th>Archivar caso</th>
                         </tr>
                     </thead>
@@ -62,6 +63,7 @@
                             <td>Fila 1 Columna 2</td>
                             <td>Fila 1 Columna 3</td>
                             <td>Fila 1 Columna 4</td>
+                            <td><i onclick="openModal(1)" class="clientfile__icon fa-solid fa-pen"></i></td>
                             <td>Fila 1 Columna 4</td>
                         </tr>
                         <tr>
@@ -75,6 +77,7 @@
                             <td>Fila 2 Columna 2</td>
                             <td>Fila 2 Columna 3</td>
                             <td>Fila 2 Columna 4</td>
+                            <td><i onclick="openModal(1)" class="clientfile__icon fa-solid fa-pen"></i></td>
                             <td>Fila 2 Columna 4</td>
                         </tr>
                         <tr>
@@ -88,6 +91,7 @@
                             <td>Fila 3 Columna 2</td>
                             <td>Fila 3 Columna 3</td>
                             <td>Fila 3 Columna 4</td>
+                            <td><i onclick="openModal(1)" class="clientfile__icon fa-solid fa-pen"></i></td>
                             <td>Fila 3 Columna 4</td>
                         </tr>
                         <tr>
@@ -101,6 +105,7 @@
                             <td>Fila 4 Columna 2</td>
                             <td>Fila 4 Columna 3</td>
                             <td>Fila 4 Columna 4</td>
+                            <td><i onclick="openModal(1)" class="clientfile__icon fa-solid fa-pen"></i></td>
                             <td>Fila 4 Columna 4</td>
                         </tr>
                     </tbody>
@@ -115,7 +120,7 @@
             <div class="cases__form">
                 <i onclick="closeModal(1)" class="cases__xicon fa-solid fa-x"></i>
                 <form class="cases__form-to-send" action="#">
-                    <h1 class="cases__title">Nuevo caso</h1>
+                    <h1 class="cases__title">Expediente</h1>
                     <div class="form__cases-infield">
                         <input class="form__cases-input" type="email" placeholder="ID del caso" name="email" />
                         <label class="form__cases-label"></label>
@@ -158,7 +163,6 @@
                     <button class="form__cases-button">Añadir</button>
                 </form>
             </div>
-
 
             <script>
                 // URL base de la API
