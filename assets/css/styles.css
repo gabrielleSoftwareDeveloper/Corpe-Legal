@@ -16,7 +16,6 @@
 
 * {
     font-family: cinzel, serif;
-    /* Por ver */
     text-decoration: none;
     list-style-type: none;
     padding: 0px;
@@ -32,7 +31,8 @@ body {
     background-color: var(--bg-color);
 }
 
-th, td{
+th,
+td {
     text-align: center;
 }
 
@@ -41,7 +41,7 @@ th, td{
 .layout__cases,
 .layout__user-management,
 .layout__clientfile,
-.layout__calendar{
+.layout__calendar {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,6 +76,7 @@ th, td{
 
 .layout__mycase {
     width: 50%;
+    margin: 5rem;
 }
 
 .layout__accounting,
@@ -84,13 +85,13 @@ th, td{
     margin: 4rem;
 }
 
-.layout__cases{
+.layout__cases {
     margin-bottom: 2rem;
 }
 
-.layout__calendar{
-    flex-direction: column; 
-    gap: 4rem; 
+.layout__calendar {
+    flex-direction: column;
+    gap: 4rem;
     padding: 4rem;
 }
 
@@ -114,12 +115,12 @@ th, td{
     /*Centrado en el eje y.*/
 }
 
-.menu__navbar--fixed{
+.menu__navbar--fixed {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index:9;
+    z-index: 9;
     background-color: var(--color--primary);
     box-shadow: 0px 2px 10px 0 rgba(0, 0, 0, 10%);
 
@@ -293,7 +294,7 @@ th, td{
 .states__pendiente,
 .states__archivado,
 .states__en-proceso,
-.states__estudio{
+.states__estudio {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -316,7 +317,7 @@ th, td{
 }
 
 /* Tarjetas de usuario */
-.states__title{
+.states__title {
     color: var(--grad-clr1);
     font-size: 1rem;
     font-weight: 700;
@@ -330,18 +331,19 @@ th, td{
     flex-direction: column;
     background: var(--color--primary);
     padding: 1rem;
+    padding-bottom: 1.5rem;
     margin-top: 1rem;
     border-radius: 15px;
 }
 
-.card__header{
+.card__header {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items:center;
+    align-items: center;
 }
 
-.users__list{
+.users__list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,7 +351,7 @@ th, td{
 }
 
 
-/* LOGIN / REGISTER */
+/* LOGIN / REGISTER / Formularios emergentes */
 
 .layout__login {
     position: relative;
@@ -362,11 +364,49 @@ th, td{
     overflow: hidden;
 }
 
-.login__form {
+.login__form,
+.cases__form,
+.accounting__form,
+.clientfile__form,
+.notes__form {
     position: absolute;
     width: 60%;
     height: 100%;
+}
 
+.cases__form,
+.accounting__form,
+.clientfile__form,
+.notes__form {
+    z-index: 5;
+    display: none;
+    width: 40%;
+    height: 660px;
+    background-color: var(--color--primary);
+    box-shadow: 25px 30px 55px #5557;
+    border-radius: 13px;
+    top:2rem;
+}
+
+.clientfile__form{
+    height: 740px;
+    top: 0.5rem;
+}
+
+.accounting__form{
+    height: 730px;
+    top: 1rem;
+}
+
+.notes__form{
+    background-color: #fff;
+    height: 300px;
+    top: 10rem;
+}
+
+textarea{
+    max-width: 100%;
+    max-height: 110px;
 }
 
 .login__sign-up {
@@ -378,7 +418,11 @@ th, td{
 }
 
 /* Etiqueta form */
-.login__form-to-send {
+.login__form-to-send,
+.cases__form-to-send,
+.accounting__form-to-send,
+.clientfile__form-to-send,
+.notes__form-to-send {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -387,7 +431,6 @@ th, td{
     padding: 0px 50px;
 }
 
-
 .overlay-panel__title,
 .login__title {
     color: var(--grad-clr1);
@@ -395,6 +438,7 @@ th, td{
 
 .login__title {
     margin: 1rem;
+    text-align: center;
 }
 
 .form__social-container {
@@ -417,13 +461,21 @@ th, td{
     font-size: 12px;
 }
 
-.form__login-infield {
+.form__login-infield,
+.form__cases-infield,
+.form__accounting-infield,
+.form__clientfile-infield,
+.form__notes-infield {
     position: relative;
     margin: 8px 0px;
     width: 100%;
 }
 
-.form__login-input {
+.form__login-input,
+.form__cases-input,
+.form__accounting-input,
+.form__clientfile-input,
+.form__notes-textarea {
     width: 100%;
     padding: 12px 8px;
     background-color: #f3f3f3;
@@ -431,7 +483,11 @@ th, td{
     outline: none;
 }
 
-.form__login-label {
+.form__login-label,
+.form__cases-label,
+.form__accounting-label,
+.form__clientfile-label,
+.form__notes-label {
     position: absolute;
     left: 50%;
     top: 100%;
@@ -442,7 +498,11 @@ th, td{
     transition: 0.3s;
 }
 
-.form__login-input:focus~.form__login-label {
+.form__login-input:focus~.form__login-label,
+.form__cases-input:focus~.form__cases-label,
+.form__accounting-input:focus~.form__accounting-label,
+.form__clientfile-input:focus~.form__clientfile-label,
+.form__notes-textarea:focus~.form__notes-label {
     width: 100%;
 }
 
@@ -460,9 +520,14 @@ th, td{
 }
 
 .form__login-button,
+.form__cases-button,
+.form__accounting-button,
+.form__clientfile-button,
+.form__notes-button,
 .overlay-panel__button,
 .info__modify-button,
 .info__modify-button--notes,
+.cases__modify-button,
 #overlayBtn {
     border-radius: 20px;
     border: 1px solid var(--grad-clr1);
@@ -479,18 +544,49 @@ th, td{
 
 .overlay-panel__button:hover,
 .info__modify-button:hover,
-.info__modify-button--notes:hover {
+.info__modify-button--notes:hover,
+.cases__modify-button:hover,
+.form__cases-button:hover,
+.form__accounting-button:hover,
+.form__clientfile-button:hover,
+.form__notes-button:hover {
     opacity: 0.7;
 }
 
 .login__form button {
     margin-top: 17px;
-    transition: 80ms ease-in;
+    transition: 250ms ease-in;
 }
 
 .login__form button:hover {
     background-color: #fff;
     color: var(--grad-clr1);
+}
+
+.form__cases-button,
+.form__accounting-button,
+.form__clientfile-button,
+.form__notes-button{
+    margin-top: 2rem;
+}
+
+.cases__xicon,
+.accounting__xicon,
+.clientfile__xicon,
+.notes__xicon{
+    position: absolute;
+    font-size: 1rem;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+
+.cases__xicon:hover,
+.accounting__xicon:hover,
+.clientfile__xicon:hover,
+.notes__xicon:hover{
+    opacity: 0.7;
 }
 
 .overlay-container {
@@ -564,9 +660,10 @@ th, td{
     margin-bottom: 47px;
 }
 
-.overlay-panel button {
-    border: none;
-    background-color: transparent;
+.overlay-panel__button--login{
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 12px 18px;
 }
 
 /* Toggles para deslizar las pantallas con js. */
@@ -722,6 +819,7 @@ th, td{
 .mycase__title,
 .accounting__title,
 .cases__title,
+.clientfile__title,
 .user-management__title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -730,6 +828,7 @@ th, td{
 
 .accounting__title,
 .cases__title,
+.clientfile__title,
 .user-management__title {
     font-size: 1.7rem;
     margin-bottom: 20px;
@@ -746,7 +845,7 @@ th, td{
     margin: 1rem;
 }
 
-.users__options{
+.users__options {
     margin: 0;
 }
 
@@ -876,7 +975,8 @@ th, td{
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 15%);
-    overflow-x: auto; /* Añadir scroll */
+    overflow-x: auto;
+    /* Añadir scroll */
 }
 
 .cases__table--documentation {
@@ -952,18 +1052,18 @@ th, td{
 }
 
 .clientfile__username,
-.card__username{
+.card__username {
     font-size: 1.2rem;
     font-weight: 700;
     padding-left: 10px;
     color: var(--grad-clr1);
 }
 
-.card__username{
+.card__username {
     font-size: 0.9rem;
 }
 
-.clientfile__icon{
+.clientfile__icon {
     color: var(--color-text-);
     font-size: 1.5rem;
 }
@@ -976,7 +1076,8 @@ th, td{
     width: 90%;
     height: 1px;
     background-color: var(--grad-clr1);
-    transform: translateX(-50%); /* Ajusta el punto de inicio para centrar el borde */
+    transform: translateX(-50%);
+    /* Ajusta el punto de inicio para centrar el borde */
 }
 
 .clientfile__info {
@@ -995,11 +1096,11 @@ th, td{
     justify-content: center;
     width: 100%;
     grid-area: notes;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     overflow-y: auto;
 }
 
-.notes__notes-container{
+.notes__notes-container {
     position: relative;
     display: flex;
     justify-content: start;
@@ -1010,48 +1111,49 @@ th, td{
     max-height: 565px;
     border-radius: 20px;
     background-color: var(--bg-color);
-    overflow-y: auto; /* Añadir scroll */
+    overflow-y: auto;
+    /* Añadir scroll */
 }
 
-.notes__note{
+.notes__note {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 0 1rem;
     border-bottom: 1px solid var(--color--primary);
-    
+
 }
 
-.note__title{
+.note__title {
     font-weight: 700;
     margin-top: 0.7rem;
 }
 
-.note__text{
+.note__text {
     margin: 0.5rem;
 }
 
-.note__writter{
+.note__writter {
     color: var(--grad-clr2);
     margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
 .info__left,
-.info__right{
+.info__right {
     display: flex;
-    justify-content:center;
-    align-items:space-around;
+    justify-content: center;
+    align-items: space-around;
     flex-direction: column;
     gap: 1rem;
 }
 
-.info__title{
+.info__title {
     font-weight: 700;
 }
 
-.info__text{
+.info__text {
     background-color: #f3f3f3;
     padding: 4px;
     border-radius: 7px;
@@ -1061,11 +1163,12 @@ th, td{
 
 /* Estilos para el menú versión móvil. */
 
-.navbar__mobile-btn{
-    display: none; /* Mostrando */
+.navbar__mobile-btn {
+    display: none;
+    /* Mostrando */
 }
 
-.mobile-btn__wrap{
+.mobile-btn__wrap {
     height: 4rem;
     width: 4rem;
     background-color: var(--color-text-body);
@@ -1079,7 +1182,7 @@ th, td{
     flex-direction: column;
 }
 
-.mobile-btn__line{
+.mobile-btn__line {
     /* display block sería neceario para visualizarlo en caso de que nno hubiese display flex */
     width: 2rem;
     height: 0.2rem;
@@ -1088,12 +1191,12 @@ th, td{
     transition: all 300ms ease-in-out;
 }
 
-.mobile-btn__line:last-child{
+.mobile-btn__line:last-child {
     width: 1rem;
     margin-right: -1rem;
 }
 
-.menu-mobile{
+.menu-mobile {
     /* display: none; Se elimina porque impide la transición */
     visibility: hidden;
     opacity: 0;
@@ -1107,17 +1210,18 @@ th, td{
     padding: 5rem 1rem;
     padding-top: 0;
     box-shadow: 0px 0px 85px -35px rgba(0, 0, 0, 0.5);
-    overflow-y: auto; /* Añadir scroll */
+    overflow-y: auto;
+    /* Añadir scroll */
     transition: all 800ms cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-.menu-mobile--show{
+.menu-mobile--show {
     visibility: visible;
     opacity: 1;
     left: 0;
 }
 
-.menu-mobile__header{
+.menu-mobile__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1126,15 +1230,15 @@ th, td{
     border-bottom: 1px solid var(--color-borders);
 }
 
-.menu-mobile__container-logo{
+.menu-mobile__container-logo {
     width: 100px;
 }
 
-.menu-mobile__logo{
+.menu-mobile__logo {
     width: 100%;
 }
 
-.menu-mobile__btn-close{
+.menu-mobile__btn-close {
     background-color: transparent;
     height: 3rem;
     width: 3rem;
@@ -1145,19 +1249,19 @@ th, td{
     cursor: pointer;
 }
 
-.menu-mobile__list{
+.menu-mobile__list {
     display: block;
     height: 100%;
     overflow: auto;
 }
 
-.menu-mobile__item{
+.menu-mobile__item {
     position: relative;
     border-bottom: 1px solid var(--color-borders);
     margin: 0 1rem;
 }
 
-.menu-mobile__link{
+.menu-mobile__link {
     position: relative;
     height: 5rem;
     line-height: 5rem;
@@ -1168,11 +1272,11 @@ th, td{
     justify-content: space-between;
 }
 
-.menu-mobile__icon{
+.menu-mobile__icon {
     font-size: 1.4rem;
 }
 
-.menu-mobile__submenu-mobile{
+.menu-mobile__submenu-mobile {
     display: none;
     visibility: visible;
     opacity: 1;
@@ -1181,7 +1285,7 @@ th, td{
     padding-bottom: 1rem;
 }
 
-.submenu-mobile__link{
+.submenu-mobile__link {
     display: block;
     text-decoration: none;
     position: relative;
@@ -1193,7 +1297,8 @@ th, td{
 
 /* Formularios emergentes. */
 .info__modify-button,
-.info__modify-button--notes {
+.info__modify-button--notes,
+.cases__modify-button {
     height: 3rem;
     width: 4rem;
     background-color: var(--color-text-body);
@@ -1208,19 +1313,19 @@ th, td{
     margin-top: 0.5rem;
 }
 
-.info__modify-button--notes{
+.info__modify-button--notes,
+.cases__modify-button {
     position: fixed;
     width: 9rem;
     bottom: 0.5rem;
     right: 0.5rem;
     gap: 1rem;
-    
 }
 
-    /* Tabla responsive */
-    .responsive__table {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+/* Tabla responsive */
+.responsive__table {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

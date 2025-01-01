@@ -16,12 +16,13 @@
     <script src="assets/js/including-menu.js"></script>
     <script src="assets/js/menu-mobile.js"></script>
     <script src="assets/js/navbar-fixed.js"></script>
+    <script src="assets/js/modal.js"></script>
 </head>
 
 <body>
-            <!-- Menú navegación responsive -->
-            <div class="menu-mobile">
-            </div>
+    <!-- Menú navegación responsive -->
+    <div class="menu-mobile">
+    </div>
     <div class="layout">
 
         <!-- Header con navegador -->
@@ -104,7 +105,60 @@
                         </tr>
                     </tbody>
                 </table>
+
+                <button onclick="openModal(1)" class="cases__modify-button">
+                    Añadir caso <i class="clientfile__icon fa-solid fa-notes-medical"></i>
+                </button>
             </div>
+
+
+            <div class="cases__form">
+                <i onclick="closeModal(1)" class="cases__xicon fa-solid fa-x"></i>
+                <form class="cases__form-to-send" action="#">
+                    <h1 class="cases__title">Nuevo caso</h1>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="ID del caso" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Cliente" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Reclamación previa" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Contestación reclamación"
+                            name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Días transcurridos" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="APUD ACTA" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Fecha audiencia previa"
+                            name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Fecha juicio" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+                    <div class="form__cases-infield">
+                        <input class="form__cases-input" type="email" placeholder="Sentencia" name="email" />
+                        <label class="form__cases-label"></label>
+                    </div>
+
+                    <button class="form__cases-button">Añadir</button>
+                </form>
+            </div>
+
 
             <script>
                 // URL base de la API

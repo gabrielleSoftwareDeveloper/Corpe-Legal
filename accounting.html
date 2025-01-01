@@ -16,6 +16,7 @@
     <script src="assets/js/including-menu.js"></script>
     <script src="assets/js/menu-mobile.js"></script>
     <script src="assets/js/navbar-fixed.js"></script>
+    <script src="assets/js/modal.js"></script>
 
 </head>
 
@@ -48,6 +49,7 @@
                             <th>Fecha prevista de pago</th>
                             <th>Pago</th>
                             <th>Fecha real de pago</th>
+                            <th>Modificar</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -62,6 +64,8 @@
                             <td>Fila 1 Columna 2</td>
                             <td>Fila 1 Columna 3</td>
                             <td>Fila 1 Columna 4</td>
+                            <td><i onclick="openModal(4)" class="clientfile__icon fa-solid fa-pen"></i></td>
+
                         </tr>
                         <tr>
                             <td>Fila 2 Columna 1</td>
@@ -74,6 +78,8 @@
                             <td>Fila 2 Columna 2</td>
                             <td>Fila 2 Columna 3</td>
                             <td>Fila 2 Columna 4</td>
+                            <td><i onclick="openModal(4)" class="clientfile__icon fa-solid fa-pen"></i></td>
+
                         </tr>
                         <tr>
                             <td>Fila 3 Columna 1</td>
@@ -86,6 +92,8 @@
                             <td>Fila 3 Columna 2</td>
                             <td>Fila 3 Columna 3</td>
                             <td>Fila 3 Columna 4</td>
+                            <td><i onclick="openModal(4)" class="clientfile__icon fa-solid fa-pen"></i></td>
+
                         </tr>
                         <tr>
                             <td>Fila 4 Columna 1</td>
@@ -98,12 +106,63 @@
                             <td>Fila 4 Columna 2</td>
                             <td>Fila 4 Columna 3</td>
                             <td>Fila 4 Columna 4</td>
+                            <td><i onclick="openModal(4)" class="clientfile__icon fa-solid fa-pen"></i></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
         </section>
+
+        <!-- Formulario que comprende el resto de elementos del caso -->
+        <div class="accounting__form">
+            <i onclick="closeModal(4)" class="accounting__xicon fa-solid fa-x"></i>
+            <form class="accounting__form-to-send" action="#">
+                <h1 class="cases__title">Ana Locking</h1>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Cliente" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Email" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Teléfono" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Cuotas" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Mensualidad" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Provisión" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Pendiente" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="date" placeholder="Fecha prevista de pago" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="email" placeholder="Pago" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+                <div class="form__accounting-infield">
+                    <input class="form__accounting-input" type="date" placeholder="Fecha real de pago" name="email" />
+                    <label class="form__accounting-label"></label>
+                </div>
+
+                <button class="form__accounting-button">Enviar</button>
+            </form>
+        </div>
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="display: flex; align-items: center; justify-content: center;">

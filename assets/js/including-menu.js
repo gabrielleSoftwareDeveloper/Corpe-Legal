@@ -39,10 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 </a>
                 <ul class="menu-mobile__submenu-mobile">
                     <li class="submenu-mobile__item">
-                        <a href="index.html" class="submenu-mobile__link">CRM - Abogados</a>
+                        <a href="crm_abogado.html" class="submenu-mobile__link">CRM - Abogados</a>
                     </li>
                     <li class="submenu-mobile__item">
-                        <a href="index.html" class="submenu-mobile__link">CRM - Comerciales</a>
+                        <a href="crm_admin.html" class="submenu-mobile__link">CRM - Abogados</a>
+                    </li>
+                    <li class="submenu-mobile__item">
+                        <a href="crm_comercial.html" class="submenu-mobile__link">CRM - Comerciales</a>
                     </li>
                     <li class="submenu-mobile__item">
                         <a href="mycase.html" class="submenu-mobile__link">¿Cómo va mi caso?</a>
@@ -152,10 +155,13 @@ const headerTemplate = `
                 </a>
                 <ul class="nav__submenu">
                     <li class="submenu__item">
-                        <a href="index.html" class="submenu__title">CRM - Abogados</a>
+                        <a href="crm_abogado.html" class="submenu__title">CRM - Abogados</a>
                     </li>
                     <li class="submenu__item">
-                        <a href="index.html" class="submenu__title">CRM - Comerciales</a>
+                        <a href="crm_admin.html" class="submenu__title">CRM - Administrador</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="crm_comercial.html" class="submenu__title">CRM - Comerciales</a>
                     </li>
                     <li class="submenu__item">
                         <a href="mycase.html" class="submenu__title">¿Cómo va mi caso?</a>

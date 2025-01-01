@@ -16,6 +16,8 @@
     <script src="assets/js/including-menu.js"></script>
     <script src="assets/js/menu-mobile.js"></script>
     <script src="assets/js/navbar-fixed.js"></script>
+    <script src="assets/js/modal.js"></script>
+
 </head>
 
 <body>
@@ -59,10 +61,12 @@
                         <p class="info__title">Abogado</p>
                         <p class="info__text">María Fernández Hui</p>
 
-                        <button class="info__modify-button">
+                        <button onclick="openModal(2)" class="info__modify-button">
                             <i class="clientfile__icon fa-solid fa-pen"></i>
                         </button>
+
                     </article>
+
                 </section>
                 <section class="clientfile__notes">
                     <div class="notes__notes-container">
@@ -102,10 +106,23 @@
                             <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
                         </div>
 
-                        <button class="info__modify-button--notes">
+                        <button onclick="openModal(3)" class="info__modify-button--notes">
                             Nota nueva <i class="clientfile__icon fa-solid fa-notes-medical"></i>
                         </button>
                     </div>
+
+                    
+        <div class="notes__form">
+            <i onclick="closeModal(3)" class="notes__xicon fa-solid fa-x"></i>
+            <form class="notes__form-to-send" action="#">
+                <h1 class="cases__title">Nueva nota</h1>
+                <div class="form__notes-infield">
+                    <textarea class="form__notes-textarea" type="text" placeholder="Introduzca un texto" name="email"></textarea>
+                    <label class="form__notes-label"></label>
+                </div>
+                <button class="form__notes-button">Enviar</button>
+            </form>
+        </div>
                 </section>
             </article>
         </section>
@@ -234,6 +251,55 @@
                     </tbody>
                 </table>
             </div>
+
+        <div class="clientfile__form">
+            <i onclick="closeModal(2)" class="clientfile__xicon fa-solid fa-x"></i>
+            <form class="clientfile__form-to-send" action="#">
+                <h1 class="cases__title">Juan José García García</h1>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="NIF" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Correo" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Teléfono" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="ID del caso" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Último contacto" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Dirección" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Vía de entrada" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Hora de contacto" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Asesor" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <div class="form__clientfile-infield">
+                    <input class="form__clientfile-input" type="email" placeholder="Abogado" name="email" />
+                    <label class="form__clientfile-label"></label>
+                </div>
+                <button class="form__clientfile-button">Modificar</button>
+            </form>
+        </div>
+
         </section>
 
         <!-- Footer que contiene ??? -->

@@ -135,6 +135,15 @@
     .layout__dragdrop {
         width: 500px;
     }
+
+    /* Login y register */
+    .layout__login {
+        width: 810px;
+    }
+
+    #overlayBtn {
+        left: 48%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -162,6 +171,25 @@
         max-width: 600px;
     }
 
+    /* Login y register */
+    .layout__login {
+        width: 500px;
+    }
+
+    .login__form {
+        width: 100%;
+    }
+
+    .overlay-container {
+        display: none;
+    }
+
+    .cases__form,
+    .accounting__form,
+    .clientfile__form,
+    .notes__form {
+        width: 70%;
+    }
 }
 
 @media (max-width: 650px) {
@@ -171,10 +199,16 @@
         max-width: 500px;
     }
 
-        /* Documentación */
-        .layout__dragdrop {
-            width: 300px;
-        }
+    /* Documentación */
+    .layout__dragdrop {
+        width: 300px;
+    }
+
+    /* Login y register */
+    .layout__login {
+        width: 450px;
+    }
+
 
 }
 
@@ -190,6 +224,11 @@
         width: 85%;
         min-width: 400px;
     }
+
+    /* Login y register */
+    .layout__login {
+        width: 400px;
+    }
 }
 
 
@@ -203,6 +242,18 @@
     /* Menú lateral versión móvil */
     .menu-mobile {
         width: 20rem;
+    }
+
+    /* Login y register */
+    .layout__login {
+        width: 350px;
+    }
+
+    .cases__form,
+    .accounting__form,
+    .clientfile__form,
+    .notes__form  {
+        width: 80%;
     }
 
 }
@@ -232,17 +283,21 @@
         z-index: 4;
     }
 
-        /* Documentación */
-        .layout__dragdrop {
-            width: 300px;
-        }
+    /* Documentación */
+    .layout__dragdrop {
+        width: 300px;
+    }
 
-        .layout__uploadDocuments{
-            width: 300px;
-        }
+    .layout__uploadDocuments {
+        width: 300px;
+    }
 
-        .uploadDocuments__left{
-            overflow: hidden;
-        }
+    .uploadDocuments__left {
+        overflow: hidden;
+    }
 
+    /* Login y register */
+    .layout__login {
+        width: 300px;
+    }
 }

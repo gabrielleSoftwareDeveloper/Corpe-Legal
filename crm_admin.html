@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corpe Legal - CRM</title>
+    <link rel="icon" href="assets/img/logo-corpe-legal.png" />
+    
+    <!-- Fuentes y estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/playfair-display/" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <!-- Carga JS -->
+    <script src="assets/js/including-menu.js"></script>
+    <script src="assets/js/menu-mobile.js"></script>
+    <script src="assets/js/navbar-fixed.js"></script>
+
+</head>
+
+<body>
+    <!-- Menú navegación responsive -->
+    <div class="menu-mobile">
+    </div>
+
+    <!-- Layout principal -->
+    <div class="layout">
+        <!-- Header con navegador -->
+        <section class="layout__header">
+        </section>
+
+        <!-- Notificaciones de usuarios dependiendo de su estado (pendiente, en curso, reservado) -->
+        <div class="layout__states">
+
+            <section class="states__pendiente">
+
+                <h3 class="states__title">PENDIENTE - ABOGADO</h3>
+
+                <article class="states__card">
+
+                    <div class="card__header">
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Escoge una opción
+                            </option>
+                        </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article>
+
+
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+
+                <article class="states__card">
+
+                    <div class="card__header">
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Escoge una opción
+                            </option>
+                        </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article>
+
+
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+
+            <section class="states__estudio">
+
+                <h3 class="states__title">ESTUDIO - ABOGADO</h3>
+
+                <article class="states__card">
+                    <div class="card__header">
+                        <i class="user-management__icon fa-solid fa-arrow-left"></i>
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Juan José Cavas
+                            </option>
+                        </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+
+            </section>
+
+            <section class="states__en-proceso">
+
+                <h3 class="states__title">EN PROCESO - ABOGADO</h3>
+
+                <article class="states__card">
+                    <div class="card__header">
+                        <select class="users__options" name="pendiente" id="pendiente">
+                            <!-- Las opciones provienen de la BBDD -->
+                            <option disabled selected value="" class="options__option">Escoge una opción
+                            </option>
+                        </select>
+                        <i class="user-management__icon fa-solid fa-arrow-right"></i>
+                    </div>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+
+            <section class="states__archivado">
+
+                <h3 class="states__title">ARCHIVADO - ABOGADO</h3>
+
+                <article class="states__card">
+                    <select class="users__options" name="pendiente" id="reserva">
+                        <!-- Las opciones provienen de la BBDD -->
+                        <option disabled selected value="" class="options__option options-option-en-curso">
+                            Escoge una opción
+                        </option>
+                    </select>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+
+            <section class="states__pendiente">
+
+                <h3 class="states__title">NUEVO - COMERCIAL</h3>
+
+                <article class="states__card">
+                    <select class="users__options" name="pendiente" id="reserva">
+                        <!-- Las opciones provienen de la BBDD -->
+                        <option disabled selected value="" class="options__option options-option-en-curso">
+                            Escoge una opción
+                        </option>
+                    </select>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+
+            <section class="states__pendiente">
+
+                <h3 class="states__title">PENDIENTE - COMERCIAL</h3>
+
+                <article class="states__card">
+                    <select class="users__options" name="pendiente" id="reserva">
+                        <!-- Las opciones provienen de la BBDD -->
+                        <option disabled selected value="" class="options__option options-option-en-curso">
+                            Escoge una opción
+                        </option>
+                    </select>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+
+            <section class="states__archivado">
+
+                <h3 class="states__title">VIABLE - COMERCIAL</h3>
+
+                <article class="states__card">
+                    <select class="users__options" name="pendiente" id="reserva">
+                        <!-- Las opciones provienen de la BBDD -->
+                        <option disabled selected value="" class="options__option options-option-en-curso">
+                            Escoge una opción
+                        </option>
+                    </select>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+
+            <section class="states__archivado">
+
+                <h3 class="states__title">NO VIABLE - COMERCIAL</h3>
+
+                <article class="states__card">
+                    <select class="users__options" name="pendiente" id="reserva">
+                        <!-- Las opciones provienen de la BBDD -->
+                        <option disabled selected value="" class="options__option options-option-en-curso">
+                            Escoge una opción
+                        </option>
+                    </select>
+
+                    <section class="clientfile__title">
+                        <i class="clientfile__icon fa-solid fa-user"></i>
+                        <h2 class="card__username">Grant Morrison Juan José Hernández</h2>
+                    </section>
+
+                    <section class="clientfile__info">
+
+                        <article class="info__left">
+                            <p class="info__title">Correo</p>
+                            <p class="info__text">joan@gmail.com</p>
+                            <p class="info__title">Teléfono</p>
+                            <p class="info__text">67898787</p>
+                        </article>
+    
+                        <article class="info__right">
+                            <p class="info__title">Vía de entrada</p>
+                            <p class="info__text">Tik tok</p>
+                            <p class="info__title">Último contacto</p>
+                            <p class="info__text">11/08/2024</p>
+                        </article> 
+                    </section>
+
+                    <section class="clientfile__notes">
+                        <div class="notes__notes-container">
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+    
+                            <div class="notes__note">
+                                <h3 class="note__title">Nota</h3>
+                                <p class="note__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, deserunt, dolorem culpa tempora iure temporibus sequi quo delectus blanditiis reprehenderit unde expedita, ullam ratione laborum impedit. Consectetur ab nihil voluptatibus!</p>
+                                <p class="note__writter">Jesús Manuel - Comercial 18/12/2024</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <a style="cursor: pointer;" href="client_file.html" target="_blank">
+                        <button class="overlay-panel__button">
+                            Más detalles +
+                        </button></a>
+                </article>
+            </section>
+        </div>
+ 
+    </div>
+</body>
+
+</html>
