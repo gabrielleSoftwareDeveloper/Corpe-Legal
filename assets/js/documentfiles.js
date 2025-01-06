@@ -41,24 +41,3 @@ window.addEventListener("load",()=>{
 
 })
 
-
-// Funciones pertenecientes a user-management.
-document.addEventListener("DOMContentLoaded", () => {
-    // Seleccionamos el contenedor de la tabla para delegar los eventos
-    const tableBody = document.querySelector(".user-management__table tbody");
-
-    // Delegamos el evento 'click' a los iconos con la clase 'user-management__icon'
-    tableBody.addEventListener("click", (event) => {
-        // Verificamos si el clic ocurrió en un elemento con la clase 'user-management__icon'
-        if (event.target.classList.contains("user-management__icon")) {
-            // Obtenemos el elemento <tr> más cercano al icono clicado
-            const row = event.target.closest("tr");
-
-            // Eliminamos la fila
-            if (row) {
-                row.remove();
-            }
-        }
-    });
-});
-

@@ -39,6 +39,7 @@ td {
 .layout,
 .layout__accounting,
 .layout__cases,
+.layout__recordcases,
 .layout__user-management,
 .layout__clientfile,
 .layout__calendar {
@@ -81,11 +82,13 @@ td {
 
 .layout__accounting,
 .layout__cases,
+.layout__recordcases,
 .layout__user-management {
     margin: 4rem;
 }
 
-.layout__cases {
+.layout__cases,
+.layout__recordcases {
     margin-bottom: 2rem;
 }
 
@@ -257,6 +260,18 @@ td {
 
 .submenu__item:nth-child(6) {
     transition-delay: 600ms;
+}
+
+.submenu__item:nth-child(7) {
+    transition-delay: 700ms;
+}
+
+.submenu__item:nth-child(8) {
+    transition-delay: 800ms;
+}
+
+.submenu__item:nth-child(9) {
+    transition-delay: 900ms;
 }
 
 .nav__item:hover>.nav__submenu {
@@ -819,6 +834,7 @@ textarea{
 .mycase__title,
 .accounting__title,
 .cases__title,
+.recordcases__title,
 .clientfile__title,
 .user-management__title {
     font-size: 1.2rem;
@@ -828,6 +844,7 @@ textarea{
 
 .accounting__title,
 .cases__title,
+.recordcases__title,
 .clientfile__title,
 .user-management__title {
     font-size: 1.7rem;
@@ -967,6 +984,7 @@ textarea{
 
 .accounting__table,
 .cases__table,
+.recordcases__table,
 .user-management__table {
     border-collapse: collapse;
     margin: 25px 70px;
@@ -985,6 +1003,7 @@ textarea{
 
 .accounting__table thead tr,
 .cases__table thead tr,
+.recordcases__table thead tr,
 .user-management__table thead tr {
     background-color: var(--grad-clr1);
     color: var(--color--primary);
@@ -996,6 +1015,8 @@ textarea{
 .accounting__table td,
 .cases__table th,
 .cases__table td,
+.recordcases__table th,
+.recordcases__table td,
 .user-management__table th,
 .user-management__table td {
     padding: 12px 15px;
@@ -1003,12 +1024,14 @@ textarea{
 
 .accounting__table tbody tr,
 .cases__table tbody tr,
+.recordcases__table tbody tr,
 .user-management__table tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
 .accounting__table tbody tr:nth-of-type(even),
 .cases__table tbody tr:nth-of-type(even),
+.recordcases__table tbody tr:nth-of-type(even),
 .user-management__table tbody tr:nth-child(even) {
     background-color: #f3f3f3;
 }

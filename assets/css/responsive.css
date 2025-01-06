@@ -73,6 +73,7 @@
 
     .accounting__table,
     .cases__table,
+    .recordcases__table,
     .user-management__table {
         margin: 25px 10px;
     }

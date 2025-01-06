@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         <a href="cases.html" class="submenu-mobile__link">Cartera de casos</a>
                     </li>
                     <li class="submenu-mobile__item">
+                        <a href="record_cases.html" class="submenu-mobile__link">Historial de casos</a>
+                    </li>
+                    <li class="submenu-mobile__item">
                         <a href="#" class="submenu-mobile__link">Estudio de viabilidad</a>
                     </li>
                     <li class="submenu-mobile__item">
@@ -171,6 +174,9 @@ const headerTemplate = `
                     </li>
                     <li class="submenu__item">
                         <a href="cases.html" class="submenu__title">Cartera de casos</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a href="record_cases.html" class="submenu__title">Historial de casos</a>
                     </li>
                     <li class="submenu__item">
                         <a href="#" class="submenu__title">Estudio de viabilidad</a>
