@@ -98,6 +98,12 @@ td {
     padding: 4rem;
 }
 
+.calendar__container{
+    border-radius: 20px;
+    width: 60%;
+    height: 600px;
+}
+
 .layout__cases--documentation {
     margin-top: 0;
 }
