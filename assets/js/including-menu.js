@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <nav class="menu-mobile__nav">
         <ul class="menu-mobile__list">
             <li class="menu-mobile__item"">
-                    <a href=" login.html" class="menu-mobile__link" target="_blank">Inicio</a>
+                    <a href=" login.html" class="menu-mobile__link">Inicio</a>
             </li>
             <!-- Solo disponible para el administrador -->
             <li class="menu-mobile__item"">
@@ -136,7 +136,7 @@ const headerTemplate = `
     <nav class="navbar__nav">
         <ul class="nav__list">
             <li class="nav__item">
-                <a href="login.html" class="nav__title" target="_blank">Inicio</a>
+                <a href="login.html" class="nav__title">Inicio</a>
             </li>
             <!-- Solo disponible para el administrador -->
             <li class="nav__item">
