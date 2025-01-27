@@ -20,6 +20,11 @@
     <!-- API Calendario Google -->
     <script src="https://apis.google.com/js/api.js"></script>
 
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://apis.google.com/js/api.js"></script> 
+
+
+
 </head>
 
 <body>
@@ -35,8 +40,7 @@
 
         <!-- Notificaciones de usuarios dependiendo de su estado (pendiente, en curso, reservado) -->
         <section class="layout__calendar">
-            <iframe class="calendar__container" frameborder="0" 
-
+            <iframe class="calendar__container" frameborder="0"
                 src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=UTC&hl=es&src=Z2FicmllbGRpZXRpc3RhQGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMuc3BhaW4jaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039BE5&color=%2333B679&color=%230B8043">
             </iframe>
 
@@ -50,6 +54,65 @@
 
         <!-- Footer que contiene ??? -->
         <footer class="layout__footer" style="padding: 4rem;">
+
+            <script>
+                let auth2;
+
+                function initClient() {
+                    gapi.load('client:auth2', () => {
+                        gapi.client.init({
+                            apiKey: 'TU_API_KEY',
+                            clientId: 'TU_CLIENT_ID',
+                            discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
+                            scope: "https://www.googleapis.com/auth/calendar.readonly"
+                        }).then(() => {
+                            auth2 = gapi.auth2.getAuthInstance();
+                        });
+                    });
+                }
+
+                function signIn() {
+                    auth2.signIn().then(user => {
+                        const profile = user.getBasicProfile();
+                        const token = user.getAuthResponse().access_token;
+                        console.log(`Usuario autenticado: ${profile.getName()}`);
+                        loadCalendars(token);
+                    });
+                }
+
+                function signOut() {
+                    auth2.signOut();
+                }
+
+                function loadCalendars(token) {
+                    gapi.client.setToken({ access_token: token });
+
+                    gapi.client.calendar.calendarList.list().then(response => {
+                        const calendars = response.result.items;
+                        calendars.forEach(calendar => {
+                            console.log(`Calendario: ${calendar.summary}`);
+                            // Aquí puedes mostrar los eventos del calendario
+                            loadEvents(calendar.id);
+                        });
+                    });
+                }
+
+                function loadEvents(calendarId) {
+                    gapi.client.calendar.events.list({
+                        calendarId: calendarId,
+                        timeMin: new Date().toISOString(),
+                        showDeleted: false,
+                        singleEvents: true,
+                        orderBy: 'startTime'
+                    }).then(response => {
+                        const events = response.result.items;
+                        console.log(`Eventos para ${calendarId}:`, events);
+                        // Renderiza los eventos en tu aplicación
+                    });
+                }
+
+
+            </script>
         </footer>
 
     </div>

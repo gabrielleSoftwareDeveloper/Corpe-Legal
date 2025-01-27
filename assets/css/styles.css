@@ -1345,6 +1345,7 @@ textarea{
 .info__modify-button--notes,
 .cases__modify-button {
     position: fixed;
+    z-index: 7;
     width: 9rem;
     bottom: 0.5rem;
     right: 0.5rem;
